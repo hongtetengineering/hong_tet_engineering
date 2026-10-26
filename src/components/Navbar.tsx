@@ -12,7 +12,7 @@ export function Navbar() {
     <div className="w-full pt-4 sm:pt-6 px-4 sm:px-6 relative z-50">
       <header className="max-w-[1120px] mx-auto bg-white/95 backdrop-blur-md rounded-full shadow-[0_4px_24px_rgba(0,0,0,0.06)] border border-neutral-200/80 px-5 sm:px-7 h-16 sm:h-[68px] flex items-center justify-between transition-all">
         {/* Brand / Logo */}
-        <Link href="#top" className="flex items-center gap-3 group">
+        <Link href="/" className="flex items-center gap-3 group cursor-pointer" title="Hong Tet Engineering - Home">
           <div className="relative h-10 sm:h-11 w-32 sm:w-36">
             <Image
               src="/logo/full-logo-transparent.webp"
@@ -27,34 +27,34 @@ export function Navbar() {
         {/* Center Nav Links */}
         <nav className="hidden md:flex items-center gap-7 lg:gap-8 text-[14px] font-medium text-neutral-700">
           <Link
-            href="#about"
-            className="hover:text-black transition-colors"
+            href="/"
+            className="hover:text-[#FA551E] transition-colors"
           >
-            About us
+            Home
           </Link>
           <Link
-            href="#services"
-            className="hover:text-black transition-colors"
+            href="/about"
+            className="hover:text-[#FA551E] transition-colors"
+          >
+            About Us
+          </Link>
+          <Link
+            href="/services"
+            className="hover:text-[#FA551E] transition-colors"
           >
             Services
           </Link>
           <Link
-            href="#process"
-            className="hover:text-black transition-colors"
+            href="/projects"
+            className="hover:text-[#FA551E] transition-colors"
           >
-            Process
+            Projects
           </Link>
           <Link
-            href="#projects"
-            className="hover:text-black transition-colors"
+            href="/contact"
+            className="hover:text-[#FA551E] transition-colors"
           >
-            Work
-          </Link>
-          <Link
-            href="#testimonials"
-            className="hover:text-black transition-colors"
-          >
-            Testimonial
+            Contact Us
           </Link>
         </nav>
 
@@ -68,8 +68,8 @@ export function Navbar() {
             +65 8314 5705
           </a>
           <Link
-            href="#contact"
-            className="inline-flex items-center justify-center px-6 py-2.5 sm:py-3 rounded-full bg-[#FA551E] hover:bg-[#e0430f] text-white text-xs sm:text-[13px] font-bold tracking-wide shadow-xs hover:shadow-md transition-all active:scale-[0.98]"
+            href="/contact"
+            className="hidden sm:inline-flex items-center justify-center px-6 py-2.5 sm:py-3 rounded-full bg-[#FA551E] hover:bg-[#e0430f] text-white text-xs sm:text-[13px] font-bold tracking-wide shadow-xs hover:shadow-md transition-all active:scale-[0.98]"
           >
             Get a Free Estimate
           </Link>
@@ -90,39 +90,39 @@ export function Navbar() {
         <div className="md:hidden max-w-[1120px] mx-auto mt-2 bg-white rounded-3xl shadow-xl border border-neutral-200 p-6 space-y-4 animate-in slide-in-from-top-2 duration-200">
           <div className="flex flex-col space-y-3 font-semibold text-sm text-neutral-800">
             <Link
-              href="#about"
+              href="/"
               onClick={() => setMobileMenuOpen(false)}
               className="py-1 hover:text-[#FA551E]"
             >
-              About us
+              Home
             </Link>
             <Link
-              href="#services"
+              href="/about"
+              onClick={() => setMobileMenuOpen(false)}
+              className="py-1 hover:text-[#FA551E]"
+            >
+              About Us
+            </Link>
+            <Link
+              href="/services"
               onClick={() => setMobileMenuOpen(false)}
               className="py-1 hover:text-[#FA551E]"
             >
               Services
             </Link>
             <Link
-              href="#process"
+              href="/projects"
               onClick={() => setMobileMenuOpen(false)}
               className="py-1 hover:text-[#FA551E]"
             >
-              Process
+              Projects
             </Link>
             <Link
-              href="#projects"
+              href="/contact"
               onClick={() => setMobileMenuOpen(false)}
               className="py-1 hover:text-[#FA551E]"
             >
-              Work
-            </Link>
-            <Link
-              href="#testimonials"
-              onClick={() => setMobileMenuOpen(false)}
-              className="py-1 hover:text-[#FA551E]"
-            >
-              Testimonial
+              Contact Us
             </Link>
           </div>
           <div className="pt-3 border-t border-neutral-200 flex flex-col gap-2.5">
@@ -134,7 +134,7 @@ export function Navbar() {
               Call +65 8314 5705
             </a>
             <Link
-              href="#contact"
+              href="/contact"
               onClick={() => setMobileMenuOpen(false)}
               className="flex items-center justify-center py-2.5 rounded-full bg-[#FA551E] text-white text-xs font-bold"
             >

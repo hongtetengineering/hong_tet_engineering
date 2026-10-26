@@ -45,56 +45,50 @@ export function ProcessSection() {
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 xl:gap-20 items-start">
           {/* Left Column (Sticky) */}
           <div className="lg:col-span-5 lg:sticky lg:top-24 xl:top-28">
-            {/* Top Indicator */}
-            <div className="flex items-center gap-2 text-sm font-medium text-neutral-800 mb-4 sm:mb-5">
-              <span className="w-1.5 h-1.5 rounded-full bg-neutral-900 inline-block" />
-              <span>How we Works</span>
-            </div>
-
-            {/* Main Heading */}
-            <h2 className="text-4xl sm:text-5xl lg:text-6xl font-bold tracking-tight text-neutral-950 leading-[1.08] mb-4 sm:mb-5">
-              Our Process
+            {/* Main Heading - Strictly 1 line, NO eyebrow above */}
+            <h2 className="text-xl min-[390px]:text-2xl sm:text-4xl lg:text-5xl font-bold tracking-tight text-neutral-950 leading-tight whitespace-nowrap mb-2.5 sm:mb-4">
+              Our Work Process
             </h2>
 
-            {/* Subtitle Description */}
-            <p className="text-sm sm:text-base text-neutral-600 leading-relaxed max-w-md mb-8 sm:mb-10">
-              We streamline the engineering and construction journey with a clear, proven process — designed to ensure alignment, speed, and measurable outcomes.
+            {/* Subtitle Description - Strictly 2 lines */}
+            <p className="text-xs sm:text-base text-neutral-600 leading-relaxed max-w-md mb-6 sm:mb-8">
+              We streamline every project through a transparent, structured workflow — ensuring complete alignment, safety, and timely completion.
             </p>
 
             {/* Orange Licensed Card */}
-            <div className="rounded-3xl bg-[#FA551E] text-white p-6 sm:p-7 shadow-xl shadow-orange-500/10">
+            <div className="rounded-3xl bg-[#FA551E] text-white p-5 sm:p-7 shadow-xl shadow-orange-500/10">
               {/* Inner Top Pill */}
-              <div className="rounded-2xl bg-black/12 p-3 sm:p-3.5 flex items-center gap-3.5">
-                <div className="w-9 h-9 rounded-xl border border-white/40 flex items-center justify-center shrink-0">
-                  <ShieldCheck className="w-5 h-5 text-white stroke-[2.2]" />
+              <div className="rounded-2xl bg-black/12 p-3 sm:p-3.5 flex items-center gap-3 sm:gap-3.5">
+                <div className="w-8 h-8 sm:w-9 sm:h-9 rounded-xl border border-white/40 flex items-center justify-center shrink-0">
+                  <ShieldCheck className="w-4 h-4 sm:w-5 sm:h-5 text-white stroke-[2.2]" />
                 </div>
-                <div className="flex flex-col gap-1">
-                  <span className="text-[11px] font-bold tracking-wider text-white uppercase leading-none">
+                <div className="flex flex-col gap-0.5 sm:gap-1">
+                  <span className="text-[10px] sm:text-[11px] font-bold tracking-wider text-white uppercase leading-none">
                     LICENSED
                   </span>
                   <div className="flex items-center gap-1 text-white">
                     {[...Array(5)].map((_, i) => (
-                      <Star key={i} className="w-3.5 h-3.5 fill-white text-white" />
+                      <Star key={i} className="w-3 h-3 sm:w-3.5 sm:h-3.5 fill-white text-white" />
                     ))}
                   </div>
                 </div>
               </div>
 
               {/* Card Headline & Subtitle */}
-              <h3 className="mt-5 text-xl sm:text-2xl font-bold tracking-tight text-white leading-tight">
+              <h3 className="mt-4 sm:mt-5 text-lg sm:text-2xl font-bold tracking-tight text-white leading-tight">
                 5-Star Licensed Service
               </h3>
-              <p className="mt-1.5 text-xs sm:text-sm text-white/90 font-normal leading-relaxed">
+              <p className="mt-1 sm:mt-1.5 text-xs sm:text-sm text-white/90 font-normal leading-relaxed">
                 Proven quality. Trusted by thousands.
               </p>
 
               {/* Avatar Cluster & Happy Customers */}
-              <div className="mt-6 flex items-center gap-3.5">
+              <div className="mt-5 sm:mt-6 flex items-center gap-3 sm:gap-3.5">
                 <div className="flex -space-x-2.5 items-center">
                   {avatars.map((av, i) => (
                     <div
                       key={i}
-                      className="relative h-9 w-9 sm:h-10 sm:w-10 rounded-full border-2 border-white overflow-hidden shrink-0 shadow-sm"
+                      className="relative h-8 w-8 sm:h-10 sm:w-10 rounded-full border-2 border-white overflow-hidden shrink-0 shadow-sm"
                       style={{
                         borderRadius: "9999px",
                         clipPath: "circle(50% at 50% 50%)",
@@ -112,7 +106,7 @@ export function ProcessSection() {
                   ))}
                 </div>
                 <div className="flex items-center gap-2">
-                  <span className="px-2.5 py-0.5 rounded-full bg-black/15 text-white font-bold text-xs">
+                  <span className="px-2 sm:px-2.5 py-0.5 rounded-full bg-black/15 text-white font-bold text-[11px] sm:text-xs">
                     2K+
                   </span>
                   <span className="text-xs sm:text-sm font-medium text-white">
@@ -129,27 +123,27 @@ export function ProcessSection() {
               {steps.map((st) => (
                 <div
                   key={st.num}
-                  className="flex items-start gap-5 sm:gap-7 lg:gap-9"
+                  className="flex items-start gap-4 sm:gap-7 lg:gap-9"
                 >
                   {/* Left: Number + Vertical Line directly underneath extending down */}
-                  <div className="flex flex-col items-center shrink-0 w-11 sm:w-14 lg:w-16 self-stretch">
-                    <span className="text-3xl sm:text-4xl lg:text-5xl font-bold text-neutral-900 tracking-tight leading-none block select-none">
+                  <div className="flex flex-col items-center shrink-0 w-9 sm:w-14 lg:w-16 self-stretch">
+                    <span className="text-2xl sm:text-4xl lg:text-5xl font-bold text-neutral-900 tracking-tight leading-none block select-none">
                       {st.num}
                     </span>
-                    <div className="w-[1px] bg-neutral-200 flex-1 my-3 sm:my-4" />
+                    <div className="w-[1px] bg-neutral-200 flex-1 my-2.5 sm:my-4" />
                   </div>
 
                   {/* Right: Step Content */}
-                  <div className="flex-1 min-w-0 pb-14 sm:pb-18 lg:pb-22">
-                    <h3 className="text-xl sm:text-2xl lg:text-3xl font-bold text-neutral-900 tracking-tight">
+                  <div className="flex-1 min-w-0 pb-8 sm:pb-14 lg:pb-18">
+                    <h3 className="text-lg sm:text-2xl lg:text-3xl font-bold text-neutral-900 tracking-tight">
                       {st.title}
                     </h3>
 
-                    <p className="mt-2 text-sm sm:text-base text-neutral-600 leading-relaxed max-w-lg">
+                    <p className="mt-1.5 sm:mt-2 text-xs sm:text-base text-neutral-600 leading-relaxed max-w-lg">
                       {st.desc}
                     </p>
 
-                    <div className="mt-5 sm:mt-6 relative w-full h-[240px] sm:h-[320px] md:h-[380px] rounded-2xl sm:rounded-3xl overflow-hidden bg-neutral-100 shadow-sm border border-black/5">
+                    <div className="mt-4 sm:mt-6 relative w-full h-[200px] sm:h-[300px] md:h-[380px] rounded-2xl sm:rounded-3xl overflow-hidden bg-neutral-100 shadow-sm border border-black/5">
                       <Image
                         src={st.img}
                         alt={st.alt}

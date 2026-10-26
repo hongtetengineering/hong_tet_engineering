@@ -1,8 +1,8 @@
 "use client";
 
-import { useState } from "react";
+import { CheckCircle2, MessageSquare, Phone } from "lucide-react";
 import Image from "next/image";
-import { Send, CheckCircle2, MessageSquare, Phone } from "lucide-react";
+import { useState } from "react";
 
 export function ContactSection() {
   const [formData, setFormData] = useState({
@@ -26,32 +26,53 @@ export function ContactSection() {
   };
 
   return (
-    <section id="contact" className="bg-[#08090C] text-white py-20 sm:py-28 relative">
+    <section
+      id="contact"
+      className="bg-[#08090C] text-white py-20 sm:py-28 relative"
+    >
       <div className="max-w-[1240px] mx-auto px-4 sm:px-6">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-14 items-center">
-          {/* Left Column: Image */}
-          <div className="lg:col-span-5 relative h-[380px] sm:h-[500px] lg:h-[580px] rounded-3xl overflow-hidden border border-white/10 shadow-xl bg-neutral-900">
+          {/* Left Column: Relevant Engineering Photo */}
+          <div className="lg:col-span-5 relative h-[300px] sm:h-[480px] lg:h-[560px] rounded-3xl overflow-hidden border border-white/12 shadow-2xl bg-neutral-900 group">
             <Image
-              src="/home/bTKcWRZFnXXRl0SfE0GiqJWx90Q.png"
-              alt="Engineers reviewing project drawings"
+              src="/home/contact-engineering-team.jpg"
+              alt="Hong Tet Engineering team reviewing site drawings"
               fill
-              className="object-cover"
+              className="object-cover group-hover:scale-103 transition-transform duration-700 ease-out"
+              sizes="(max-width: 1024px) 100vw, 500px"
+              priority
             />
+            <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent pointer-events-none" />
+
+            {/* Bottom Floating Glass Badge */}
+            <div className="absolute bottom-3 left-3 right-3 sm:bottom-5 sm:left-5 sm:right-5 rounded-2xl bg-black/60 backdrop-blur-md border border-white/15 p-3.5 sm:p-5 flex items-center justify-between gap-2.5 sm:gap-3">
+              <div>
+                <div className="flex items-center gap-1.5 sm:gap-2">
+                  <span className="w-2 h-2 rounded-full bg-emerald-400 animate-pulse" />
+                  <span className="text-[11px] sm:text-xs font-bold uppercase tracking-wider text-white">
+                    Direct Consultations
+                  </span>
+                </div>
+                <p className="text-[10px] sm:text-[11px] text-neutral-300 mt-0.5 sm:mt-1">
+                  BCA & WSH Compliant Singapore Specialists
+                </p>
+              </div>
+              <div className="text-right shrink-0">
+                <span className="text-[11px] sm:text-xs font-mono text-[#FA551E] font-bold">
+                  Fast Turnaround
+                </span>
+              </div>
+            </div>
           </div>
 
           {/* Right Column: Contact Form */}
           <div className="lg:col-span-7">
-            <div className="flex items-center gap-2 text-xs font-bold uppercase tracking-wider text-neutral-400 mb-3">
-              <span className="w-1.5 h-1.5 rounded-full bg-[#FA551E]" />
-              <span>Contact</span>
-            </div>
-
-            <h2 className="text-3xl sm:text-5xl font-black tracking-tight text-white leading-tight">
+            <h2 className="text-[18px] min-[390px]:text-xl sm:text-4xl lg:text-5xl font-bold tracking-tight text-white leading-tight whitespace-nowrap mb-2 sm:mb-3">
               Ready to Start Your Project?
             </h2>
 
-            <p className="mt-3 text-sm sm:text-base text-neutral-400 leading-relaxed max-w-lg">
-              Tell us about your build and receive a free consultation, site assessment, and transparent estimate.
+            <p className="text-xs sm:text-base text-neutral-400 leading-relaxed max-w-sm sm:max-w-lg">
+              Tell us about your build to receive an initial engineering consultation, on-site measurement assessment, and a transparent itemized estimate.
             </p>
 
             {submitted ? (
@@ -63,7 +84,8 @@ export function ContactSection() {
                   Thank You, {formData.name || "Client"}!
                 </h3>
                 <p className="mt-2 text-sm text-neutral-300 max-w-md mx-auto">
-                  Your enquiry has been prepared. You can connect with our Singapore engineering desk immediately via WhatsApp or phone.
+                  Your enquiry has been prepared. You can connect with our
+                  Singapore engineering desk immediately via WhatsApp or phone.
                 </p>
 
                 <div className="mt-6 flex flex-wrap items-center justify-center gap-3">
@@ -76,10 +98,10 @@ export function ContactSection() {
                   </button>
                   <a
                     href="tel:+6583145705"
-                    className="inline-flex items-center gap-2 px-6 py-3 rounded-full bg-white/10 hover:bg-white/20 text-white text-xs font-bold uppercase tracking-wider transition-colors"
+                    className="inline-flex items-center gap-2 px-6 py-3 rounded-full bg-white/10 hover:bg-white/20 text-white text-xs font-bold uppercase tracking-wider transition-colors whitespace-nowrap"
                   >
                     <Phone className="w-4 h-4 text-[#FA551E]" />
-                    <span>Call +65 8314 5705</span>
+                    <span>Call +65&nbsp;8314&nbsp;5705</span>
                   </a>
                 </div>
 
@@ -144,22 +166,40 @@ export function ContactSection() {
                       <option value="" disabled className="text-neutral-500">
                         Service...
                       </option>
-                      <option value="Metal Structure & I-Beams" className="bg-[#12141A]">
+                      <option
+                        value="Metal Structure & I-Beams"
+                        className="bg-[#12141A]"
+                      >
                         Metal Structure & I-Beam Fabrication
                       </option>
-                      <option value="Roofing & Shelter Works" className="bg-[#12141A]">
+                      <option
+                        value="Roofing & Shelter Works"
+                        className="bg-[#12141A]"
+                      >
                         Roofing & Shelter Works
                       </option>
-                      <option value="Stainless Steel Railings & Gates" className="bg-[#12141A]">
+                      <option
+                        value="Stainless Steel Railings & Gates"
+                        className="bg-[#12141A]"
+                      >
                         Stainless Steel Railings & Gates
                       </option>
-                      <option value="Glass Installation" className="bg-[#12141A]">
+                      <option
+                        value="Glass Installation"
+                        className="bg-[#12141A]"
+                      >
                         Architectural Glass Installation
                       </option>
-                      <option value="Renovation & Painting" className="bg-[#12141A]">
+                      <option
+                        value="Renovation & Painting"
+                        className="bg-[#12141A]"
+                      >
                         House / Commercial Renovation & Painting
                       </option>
-                      <option value="Skilled Manpower Supply" className="bg-[#12141A]">
+                      <option
+                        value="Skilled Manpower Supply"
+                        className="bg-[#12141A]"
+                      >
                         Skilled Manpower Supply
                       </option>
                     </select>
@@ -182,7 +222,10 @@ export function ContactSection() {
                       <option value="$5,000 - $15,000" className="bg-[#12141A]">
                         S$5,000 - S$15,000
                       </option>
-                      <option value="$15,000 - $50,000" className="bg-[#12141A]">
+                      <option
+                        value="$15,000 - $50,000"
+                        className="bg-[#12141A]"
+                      >
                         S$15,000 - S$50,000
                       </option>
                       <option value="$50,000+" className="bg-[#12141A]">

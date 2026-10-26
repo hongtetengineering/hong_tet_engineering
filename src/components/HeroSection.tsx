@@ -53,7 +53,7 @@ export function HeroSection() {
   ];
 
   return (
-    <section className="relative w-full">
+    <section className="relative w-full max-w-full overflow-x-hidden">
       {/* =========================================================================
           MAIN HERO CARD CONTAINER (Full-width blueprint background with rounded bottom)
           ========================================================================= */}
@@ -82,18 +82,18 @@ export function HeroSection() {
 
         {/* HERO CONTENT: Header, Text, Button */}
         <div className="relative z-10 max-w-[1240px] mx-auto px-4 sm:px-6 text-center">
-          <h1 className="text-6xl sm:text-8xl lg:text-[112px] font-black tracking-tight text-neutral-900 leading-[0.96] select-none">
+          <h1 className="text-4xl min-[380px]:text-5xl sm:text-7xl md:text-8xl lg:text-[112px] font-black tracking-tight text-neutral-900 leading-[0.96] select-none">
             Built To Last
           </h1>
-          <p className="mt-5 text-base sm:text-lg lg:text-xl text-neutral-600 font-normal leading-relaxed max-w-xl mx-auto">
-            Reliable construction services for renovations, remodels, and new builds—planned clearly and built with care.
+          <p className="mt-4 sm:mt-5 text-xs sm:text-base lg:text-xl text-neutral-600 font-normal leading-relaxed max-w-sm sm:max-w-xl mx-auto">
+            Reliable structural steel fabrication, industrial roofing, metalworks, architectural glass, and skilled manpower solutions across Singapore.
           </p>
-          <div className="mt-7 flex items-center justify-center">
+          <div className="mt-6 sm:mt-7 flex items-center justify-center">
             <Link
               href="#contact"
-              className="px-8 py-3.5 rounded-full bg-[#FA551E] hover:bg-[#e0430f] text-white text-sm font-bold tracking-wide shadow-md hover:shadow-lg transition-all active:scale-[0.98]"
+              className="px-7 sm:px-8 py-3 sm:py-3.5 rounded-full bg-[#FA551E] hover:bg-[#e0430f] text-white text-xs sm:text-sm font-bold tracking-wide shadow-md hover:shadow-lg transition-all active:scale-[0.98]"
             >
-              Get a Free Estimate
+              Request a Quote
             </Link>
           </div>
         </div>
@@ -101,68 +101,68 @@ export function HeroSection() {
         {/* =========================================================================
             WORKERS STAGE WITH FLOATING TRAFFIC CONES (Positioned safely to sides and bottom)
             ========================================================================= */}
-        <div className="relative z-10 w-full max-w-[1200px] mx-auto h-[380px] sm:h-[480px] lg:h-[550px] mt-6 sm:mt-10 flex items-end justify-center">
-          {/* FLOATING TRAFFIC CONES: Left Side, Right Side, and Bottom Edge (NOT on any faces!) */}
+        <div className="relative z-10 w-full max-w-[1200px] mx-auto h-[290px] sm:h-[440px] lg:h-[550px] mt-6 sm:mt-10 flex items-end justify-center overflow-hidden">
+          {/* FLOATING TRAFFIC CONES: Hidden or refined on mobile to avoid cluttering */}
           
           {/* Cone 1: Far Left (Mid-height, blurred bokeh) */}
           <TrafficCone
-            className="absolute left-[3%] sm:left-[6%] bottom-[42%] w-10 sm:w-14 z-5"
+            className="hidden sm:block absolute left-[3%] sm:left-[6%] bottom-[42%] w-10 sm:w-14 z-5"
             blur={2.5}
             rotate={-12}
           />
 
-          {/* Cone 2: Mid-Left Floating (Outside left worker's arm, elbow level) */}
+          {/* Cone 2: Mid-Left Floating */}
           <TrafficCone
-            className="absolute left-[18%] sm:left-[21%] bottom-[38%] w-9 sm:w-12 z-5"
+            className="hidden sm:block absolute left-[18%] sm:left-[21%] bottom-[38%] w-9 sm:w-12 z-5"
             blur={1.8}
             rotate={8}
           />
 
-          {/* Cone 3: Lower Left (Near bottom-left of stage) */}
+          {/* Cone 3: Lower Left */}
           <TrafficCone
-            className="absolute left-[9%] sm:left-[12%] bottom-[16%] w-8 sm:w-11 z-5"
-            blur={3}
+            className="absolute left-[4%] sm:left-[12%] bottom-[12%] sm:bottom-[16%] w-7 sm:w-11 z-5"
+            blur={2.5}
             rotate={-16}
           />
 
           {/* Cone 4: Bottom-Left Edge */}
           <TrafficCone
-            className="absolute left-[20%] sm:left-[23%] bottom-[6%] w-10 sm:w-13 z-25"
+            className="hidden sm:block absolute left-[20%] sm:left-[23%] bottom-[6%] w-10 sm:w-13 z-25"
             blur={2}
             rotate={-8}
           />
 
           {/* Cone 5: Center-Bottom (In front of supervisor waist/belt at very bottom edge) */}
           <TrafficCone
-            className="absolute left-[47%] sm:left-[49%] bottom-[2%] w-10 sm:w-13 z-30"
-            blur={1.6}
+            className="absolute left-[48%] sm:left-[49%] bottom-[1%] sm:bottom-[2%] w-8 sm:w-13 z-30"
+            blur={1.4}
             rotate={-4}
           />
 
-          {/* Cone 6: Right-Center Bottom (Near phone/lower hands at bottom edge) */}
+          {/* Cone 6: Right-Center Bottom */}
           <TrafficCone
-            className="absolute right-[31%] sm:right-[33%] bottom-[3%] w-9 sm:w-12 z-30"
+            className="hidden sm:block absolute right-[31%] sm:right-[33%] bottom-[3%] w-9 sm:w-12 z-30"
             blur={1.6}
             rotate={14}
           />
 
-          {/* Cone 7: Mid-Right Floating (Outside right worker's arm, elbow level) */}
+          {/* Cone 7: Mid-Right Floating */}
           <TrafficCone
-            className="absolute right-[19%] sm:right-[22%] bottom-[38%] w-9 sm:w-12 z-5"
+            className="hidden sm:block absolute right-[19%] sm:right-[22%] bottom-[38%] w-9 sm:w-12 z-5"
             blur={1.8}
             rotate={-10}
           />
 
-          {/* Cone 8: Lower Right (Near bottom-right of stage) */}
+          {/* Cone 8: Lower Right */}
           <TrafficCone
-            className="absolute right-[9%] sm:right-[12%] bottom-[18%] w-11 sm:w-15 z-5"
-            blur={2.8}
+            className="absolute right-[4%] sm:right-[12%] bottom-[12%] sm:bottom-[18%] w-7 sm:w-15 z-5"
+            blur={2.5}
             rotate={15}
           />
 
-          {/* Cone 9: Far Right (Mid-height, blurred bokeh) */}
+          {/* Cone 9: Far Right */}
           <TrafficCone
-            className="absolute right-[2%] sm:right-[5%] bottom-[42%] w-10 sm:w-14 z-5"
+            className="hidden sm:block absolute right-[2%] sm:right-[5%] bottom-[42%] w-10 sm:w-14 z-5"
             blur={2.5}
             rotate={-10}
           />
@@ -170,7 +170,7 @@ export function HeroSection() {
           {/* THREE ENGINEERS */}
           <div className="relative w-full h-full flex items-end justify-center select-none pointer-events-none">
             {/* Left Worker: Arms crossed, grayscale */}
-            <div className="relative -mr-12 sm:-mr-20 lg:-mr-24 w-[200px] sm:w-[320px] lg:w-[380px] h-[78%] sm:h-[82%] z-10">
+            <div className="relative -mr-7 sm:-mr-20 lg:-mr-24 w-[125px] sm:w-[260px] lg:w-[380px] h-[78%] sm:h-[82%] z-10">
               <Image
                 src="/home/IZI1AFMAoGRXgu1yYBk8Ipzrg.png"
                 alt="Construction Engineer Left"
@@ -181,7 +181,7 @@ export function HeroSection() {
             </div>
 
             {/* Center Lead Supervisor: Full vibrant color, orange hardhat & vest, blueprint tube */}
-            <div className="relative z-20 w-[240px] sm:w-[370px] lg:w-[440px] h-[92%] sm:h-[98%] lg:h-full">
+            <div className="relative z-20 w-[170px] sm:w-[320px] lg:w-[440px] h-[92%] sm:h-[98%] lg:h-full">
               <Image
                 src="/home/US4fi1Xrh46xcHTcHtdAtBJBqUM.png"
                 alt="Lead Construction Supervisor Center"
@@ -192,7 +192,7 @@ export function HeroSection() {
             </div>
 
             {/* Right Worker: Looking at phone, grayscale */}
-            <div className="relative -ml-12 sm:-ml-20 lg:-ml-24 w-[190px] sm:w-[310px] lg:w-[370px] h-[78%] sm:h-[82%] z-10">
+            <div className="relative -ml-7 sm:-ml-20 lg:-ml-24 w-[120px] sm:w-[250px] lg:w-[370px] h-[78%] sm:h-[82%] z-10">
               <Image
                 src="/home/Y1DFRVyNJj1u4gn1PVhbXl8T1hA.png"
                 alt="Site Planning Engineer Right"
@@ -208,11 +208,15 @@ export function HeroSection() {
       {/* =========================================================================
           SECTION BELOW HERO: Brand headline, Photo Strip & Bento
           ========================================================================= */}
-      <div className="max-w-[1240px] mx-auto px-4 sm:px-6 pt-16 sm:pt-24 pb-16 sm:pb-24">
+      <div className="max-w-[1240px] mx-auto px-4 sm:px-6 pt-12 sm:pt-24 pb-12 sm:pb-24 w-full max-w-full overflow-hidden">
         {/* Centered Brand Mark / Logo */}
         <div className="text-center">
-          <div className="inline-flex items-center gap-3 justify-center mb-4">
-            <div className="relative h-9 w-28 sm:w-32">
+          <Link
+            href="/"
+            className="inline-flex items-center gap-3 justify-center mb-4 hover:scale-102 transition-transform cursor-pointer"
+            title="Hong Tet Engineering - Home"
+          >
+            <div className="relative h-14 sm:h-16 w-28 sm:w-48">
               <Image
                 src="/logo/full-logo-transparent.webp"
                 alt="Hong Tet Engineering Logo"
@@ -220,10 +224,10 @@ export function HeroSection() {
                 className="object-contain"
               />
             </div>
-          </div>
+          </Link>
 
           {/* Headline Statement: Dark bold text on left, light grey text on right */}
-          <h2 className="text-3xl sm:text-5xl lg:text-[54px] font-black tracking-tight leading-[1.12] max-w-4xl mx-auto">
+          <h2 className="text-xl min-[390px]:text-2xl sm:text-4xl lg:text-[54px] font-black tracking-tight leading-[1.15] max-w-4xl mx-auto">
             <span className="text-neutral-900">
               Reliable construction for homes
             </span>{" "}
@@ -234,12 +238,12 @@ export function HeroSection() {
         </div>
 
         {/* Horizontal Photo Strip (6 images in row) */}
-        <div className="mt-14 sm:mt-20 overflow-x-auto pb-4 scrollbar-none">
-          <div className="grid grid-cols-6 gap-3 sm:gap-4 min-w-[800px] lg:min-w-0">
+        <div className="mt-8 sm:mt-16 w-full max-w-full overflow-x-auto pb-4 scrollbar-none">
+          <div className="grid grid-cols-6 gap-2.5 sm:gap-4 min-w-[560px] sm:min-w-0">
             {photoStrip.map((item, idx) => (
               <div
                 key={idx}
-                className="group relative h-44 sm:h-56 lg:h-64 rounded-2xl overflow-hidden bg-neutral-200 shadow-sm border border-black/5"
+                className="group relative h-40 sm:h-56 lg:h-64 rounded-2xl overflow-hidden bg-neutral-200 shadow-sm border border-black/5"
               >
                 <Image
                   src={item.src}
@@ -254,11 +258,11 @@ export function HeroSection() {
         </div>
 
         {/* Trusted by Local Property Owners Card */}
-        <div className="mt-12 sm:mt-16 max-w-2xl mx-auto bg-white rounded-2xl border border-neutral-200/90 shadow-xs px-6 py-5 text-center">
-          <p className="text-xs sm:text-[13px] font-bold text-neutral-800 tracking-wide uppercase mb-3">
+        <div className="mt-10 sm:mt-16 max-w-2xl mx-auto bg-white rounded-2xl border border-neutral-200/90 shadow-xs px-5 sm:px-6 py-4 sm:py-5 text-center">
+          <p className="text-xs sm:text-[13px] font-bold text-neutral-800 tracking-wide uppercase mb-2.5 sm:mb-3">
             Trusted by Local Property Owners
           </p>
-          <div className="flex flex-wrap items-center justify-center gap-4 sm:gap-8 text-xs font-semibold text-neutral-600">
+          <div className="flex flex-wrap items-center justify-center gap-3 sm:gap-8 text-xs font-semibold text-neutral-600">
             <div className="flex items-center gap-1.5">
               <CheckCircle2 className="w-3.5 h-3.5 text-[#FA551E]" />
               <span>Licensed & Insured</span>
@@ -275,17 +279,17 @@ export function HeroSection() {
         </div>
 
         {/* 3-Column Bento Banner ("Built With Confidence") */}
-        <div className="mt-10 sm:mt-14 grid grid-cols-1 md:grid-cols-12 gap-5 sm:gap-6 items-stretch">
+        <div className="mt-8 sm:mt-14 grid grid-cols-1 md:grid-cols-12 gap-5 sm:gap-6 items-stretch">
           {/* Card 1: Orange Feature Card */}
-          <div className="md:col-span-5 rounded-3xl bg-[#FA551E] text-white p-8 sm:p-10 flex flex-col justify-between shadow-lg">
+          <div className="md:col-span-5 rounded-3xl bg-[#FA551E] text-white p-6 sm:p-10 flex flex-col justify-between shadow-lg">
             <div>
               <h3 className="text-2xl sm:text-3xl font-extrabold tracking-tight">
                 Built With Confidence
               </h3>
-              <p className="mt-3 text-sm text-white/90 leading-relaxed">
+              <p className="mt-2.5 sm:mt-3 text-xs sm:text-sm text-white/90 leading-relaxed">
                 From planning to final walkthrough, our team keeps your construction project clear, organized, and built to last.
               </p>
-              <ul className="mt-6 space-y-2.5 text-sm font-medium">
+              <ul className="mt-5 sm:mt-6 space-y-2 sm:space-y-2.5 text-xs sm:text-sm font-medium">
                 <li className="flex items-center gap-2">
                   <Check className="w-4 h-4 text-white stroke-[2.5]" />
                   <span>Licensed construction crew</span>
@@ -300,7 +304,7 @@ export function HeroSection() {
                 </li>
               </ul>
             </div>
-            <div className="mt-8 pt-4">
+            <div className="mt-6 sm:mt-8 pt-2 sm:pt-4">
               <a
                 href="tel:+6583145705"
                 className="inline-flex items-center gap-2 px-6 py-3 rounded-full bg-white text-[#FA551E] text-xs sm:text-sm font-bold shadow-sm hover:bg-neutral-50 transition-colors"
@@ -312,7 +316,7 @@ export function HeroSection() {
           </div>
 
           {/* Card 2: Photo Card (5D8SUEMZgCswNmfA3kbAygA8L0.png) */}
-          <div className="md:col-span-4 relative rounded-3xl overflow-hidden min-h-[280px] sm:min-h-[320px] shadow-sm border border-black/5">
+          <div className="md:col-span-4 relative rounded-3xl overflow-hidden min-h-[240px] sm:min-h-[320px] shadow-sm border border-black/5">
             <Image
               src="/home/5D8SUEMZgCswNmfA3kbAygA8L0.png"
               alt="Two contractors reviewing blueprints"
@@ -322,20 +326,20 @@ export function HeroSection() {
           </div>
 
           {/* Card 3: Two White Stats Cards Stacked */}
-          <div className="md:col-span-3 flex flex-col gap-5 sm:gap-6">
-            <div className="flex-1 rounded-3xl bg-white border border-neutral-200/90 p-7 sm:p-8 flex flex-col justify-center shadow-xs">
-              <span className="text-5xl lg:text-6xl font-black text-neutral-900 tracking-tight">
+          <div className="md:col-span-3 flex flex-col gap-4 sm:gap-6">
+            <div className="flex-1 rounded-3xl bg-white border border-neutral-200/90 p-5 sm:p-8 flex flex-col justify-center shadow-xs">
+              <span className="text-4xl sm:text-5xl lg:text-6xl font-black text-neutral-900 tracking-tight">
                 34+
               </span>
-              <p className="mt-2 text-sm font-medium text-neutral-600">
+              <p className="mt-1 sm:mt-2 text-xs sm:text-sm font-medium text-neutral-600">
                 Projects completed
               </p>
             </div>
-            <div className="flex-1 rounded-3xl bg-white border border-neutral-200/90 p-7 sm:p-8 flex flex-col justify-center shadow-xs">
-              <span className="text-5xl lg:text-6xl font-black text-neutral-900 tracking-tight">
+            <div className="flex-1 rounded-3xl bg-white border border-neutral-200/90 p-5 sm:p-8 flex flex-col justify-center shadow-xs">
+              <span className="text-4xl sm:text-5xl lg:text-6xl font-black text-neutral-900 tracking-tight">
                 16+
               </span>
-              <p className="mt-2 text-sm font-medium text-neutral-600">
+              <p className="mt-1 sm:mt-2 text-xs sm:text-sm font-medium text-neutral-600">
                 Years of experience
               </p>
             </div>
