@@ -34,9 +34,9 @@ export function ServiceAreaSection() {
               src="/home/bTKcWRZFnXXRl0SfE0GiqJWx90Q.png"
               alt="Service Area Map"
               fill
+              loading="lazy"
               className="object-cover"
               sizes="(max-width: 1024px) 100vw, 50vw"
-              priority
             />
 
             {/* Pin 1: Bukit Batok */}

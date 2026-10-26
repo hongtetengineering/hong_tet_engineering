@@ -111,6 +111,8 @@ export function ProcessSection() {
                         src={av}
                         alt="Client avatar"
                         fill
+                        loading="lazy"
+                        sizes="40px"
                         className="object-cover"
                         style={{ borderRadius: "9999px" }}
                       />
@@ -164,6 +166,7 @@ export function ProcessSection() {
                         src={st.img}
                         alt={st.alt}
                         fill
+                        loading="lazy"
                         className="object-cover group-hover:scale-104 transition-transform duration-700 ease-out"
                         sizes="(max-width: 1024px) 100vw, 50vw"
                       />

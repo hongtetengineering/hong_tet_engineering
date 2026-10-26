@@ -59,6 +59,8 @@ export function TestimonialsSection() {
                 src="/home/1ZWSzdE6ssdj1Lj7QdMU6YG77ps.png"
                 alt="Google Reviews"
                 fill
+                loading="lazy"
+                sizes="16px"
                 className="object-contain"
               />
             </div>
@@ -96,6 +98,8 @@ export function TestimonialsSection() {
                     src={r.img}
                     alt={r.name}
                     fill
+                    loading="lazy"
+                    sizes="40px"
                     className="object-cover"
                   />
                 </div>

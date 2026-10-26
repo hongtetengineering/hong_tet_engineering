@@ -103,6 +103,7 @@ function ProjectCard({
             className="object-cover group-hover:scale-103 transition-transform duration-700 ease-out"
             sizes="(max-width: 1280px) 100vw, 1240px"
             priority={index === 0}
+            loading={index === 0 ? "eager" : "lazy"}
           />
 
           {/* Subtle Top Index Badge */}

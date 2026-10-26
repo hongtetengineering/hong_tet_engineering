@@ -54,6 +54,8 @@ export function Footer() {
                 src="/logo/full-logo-transparent.webp"
                 alt="Hong Tet Engineering Logo"
                 fill
+                loading="lazy"
+                sizes="144px"
                 className="object-contain object-center sm:object-left"
               />
             </div>

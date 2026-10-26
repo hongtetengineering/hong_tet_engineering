@@ -43,6 +43,8 @@ export const metadata: Metadata = {
   },
 };
 
+import { SmoothScroll } from "@/components/SmoothScroll";
+
 export default function RootLayout({
   children,
 }: {
@@ -54,7 +56,7 @@ export default function RootLayout({
       className={cn("h-full", "antialiased", roboto.variable)}
     >
       <body className={cn("min-h-full flex flex-col font-sans", roboto.className)}>
-        {children}
+        <SmoothScroll>{children}</SmoothScroll>
       </body>
     </html>
   );

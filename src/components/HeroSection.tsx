@@ -208,7 +208,8 @@ export function HeroSection() {
       {/* =========================================================================
           SECTION BELOW HERO: Brand headline, Photo Strip & Bento
           ========================================================================= */}
-      <div className="max-w-[1240px] mx-auto px-4 sm:px-6 pt-12 sm:pt-24 pb-12 sm:pb-24 w-full max-w-full overflow-hidden">
+      {/* 1. Brand Mark & Headline (Constrained to standard max-w-[1240px]) */}
+      <div className="max-w-[1240px] mx-auto px-4 sm:px-6 pt-12 sm:pt-20 text-center">
         {/* Centered Brand Mark / Logo */}
         <div className="text-center">
           <Link
@@ -226,7 +227,7 @@ export function HeroSection() {
             </div>
           </Link>
 
-          {/* Headline Statement: Dark bold text on left, light grey text on right */}
+          {/* Headline Statement */}
           <h2 className="text-xl min-[390px]:text-2xl sm:text-4xl lg:text-[54px] font-black tracking-tight leading-[1.15] max-w-4xl mx-auto">
             <span className="text-neutral-900">
               Reliable construction for homes
@@ -236,29 +237,87 @@ export function HeroSection() {
             </span>
           </h2>
         </div>
+      </div>
 
-        {/* Horizontal Photo Strip (6 images in row) */}
-        <div className="mt-8 sm:mt-16 w-full max-w-full overflow-x-auto pb-4 scrollbar-none">
-          <div className="grid grid-cols-6 gap-2.5 sm:gap-4 min-w-[560px] sm:min-w-0">
+      {/* 2. Full-Width Infinite Scrolling Photo Strip Marquee */}
+      <div className="w-full overflow-hidden select-none relative py-6 sm:py-10">
+        <style>{`
+          @keyframes photoMarqueeKeyframes {
+            0% {
+              transform: translate3d(0, 0, 0);
+            }
+            100% {
+              transform: translate3d(-50%, 0, 0);
+            }
+          }
+          .animate-photo-marquee {
+            display: flex !important;
+            width: max-content !important;
+            will-change: transform !important;
+            animation: photoMarqueeKeyframes 36s linear infinite !important;
+          }
+          .animate-photo-marquee:hover {
+            animation-play-state: paused !important;
+          }
+        `}</style>
+
+        {/* Soft edge fade masks */}
+        <div className="absolute left-0 top-0 bottom-0 w-8 sm:w-24 bg-gradient-to-r from-[#FBF9F5] to-transparent z-10 pointer-events-none" />
+        <div className="absolute right-0 top-0 bottom-0 w-8 sm:w-24 bg-gradient-to-l from-[#FBF9F5] to-transparent z-10 pointer-events-none" />
+
+        <div className="animate-photo-marquee">
+          {/* Track 1 */}
+          <div className="flex items-center gap-3.5 sm:gap-5 shrink-0 pr-3.5 sm:pr-5">
             {photoStrip.map((item, idx) => (
               <div
-                key={idx}
-                className="group relative h-40 sm:h-56 lg:h-64 rounded-2xl overflow-hidden bg-neutral-200 shadow-sm border border-black/5"
+                key={`photo-1-${idx}`}
+                className="group/photo relative h-44 sm:h-56 lg:h-64 w-60 sm:w-76 lg:w-84 rounded-2xl sm:rounded-3xl overflow-hidden bg-neutral-200 shadow-sm border border-black/5 shrink-0"
               >
                 <Image
                   src={item.src}
                   alt={item.alt}
                   fill
-                  className="object-cover group-hover:scale-105 transition-transform duration-500 ease-out"
+                  loading="lazy"
+                  sizes="(max-width: 768px) 240px, 340px"
+                  className="object-cover group-hover/photo:scale-105 transition-transform duration-700 ease-out"
                 />
-                <div className="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity" />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 group-hover/photo:opacity-100 transition-opacity duration-300 pointer-events-none" />
+                <div className="absolute bottom-3 left-3 right-3 text-white text-xs sm:text-sm font-bold drop-shadow-md opacity-0 group-hover/photo:opacity-100 transition-opacity duration-300 truncate pointer-events-none">
+                  {item.alt}
+                </div>
+              </div>
+            ))}
+          </div>
+
+          {/* Track 2 for seamless loop */}
+          <div className="flex items-center gap-3.5 sm:gap-5 shrink-0 pr-3.5 sm:pr-5" aria-hidden="true">
+            {photoStrip.map((item, idx) => (
+              <div
+                key={`photo-2-${idx}`}
+                className="group/photo relative h-44 sm:h-56 lg:h-64 w-60 sm:w-76 lg:w-84 rounded-2xl sm:rounded-3xl overflow-hidden bg-neutral-200 shadow-sm border border-black/5 shrink-0"
+              >
+                <Image
+                  src={item.src}
+                  alt={item.alt}
+                  fill
+                  loading="lazy"
+                  sizes="(max-width: 768px) 240px, 340px"
+                  className="object-cover group-hover/photo:scale-105 transition-transform duration-700 ease-out"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 group-hover/photo:opacity-100 transition-opacity duration-300 pointer-events-none" />
+                <div className="absolute bottom-3 left-3 right-3 text-white text-xs sm:text-sm font-bold drop-shadow-md opacity-0 group-hover/photo:opacity-100 transition-opacity duration-300 truncate pointer-events-none">
+                  {item.alt}
+                </div>
               </div>
             ))}
           </div>
         </div>
+      </div>
 
+      {/* 3. Trusted By & Built With Confidence (Standard max-w-[1240px] matching other sections) */}
+      <div className="max-w-[1240px] mx-auto px-4 sm:px-6 pb-14 sm:pb-24">
         {/* Trusted by Local Property Owners Card */}
-        <div className="mt-10 sm:mt-16 max-w-2xl mx-auto bg-white rounded-2xl border border-neutral-200/90 shadow-xs px-5 sm:px-6 py-4 sm:py-5 text-center">
+        <div className="max-w-2xl mx-auto bg-white rounded-2xl border border-neutral-200/90 shadow-xs px-5 sm:px-6 py-4 sm:py-5 text-center">
           <p className="text-xs sm:text-[13px] font-bold text-neutral-800 tracking-wide uppercase mb-2.5 sm:mb-3">
             Trusted by Local Property Owners
           </p>
@@ -321,6 +380,8 @@ export function HeroSection() {
               src="/home/5D8SUEMZgCswNmfA3kbAygA8L0.png"
               alt="Two contractors reviewing blueprints"
               fill
+              loading="lazy"
+              sizes="(max-width: 768px) 100vw, 33vw"
               className="object-cover"
             />
           </div>

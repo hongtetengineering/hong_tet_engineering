@@ -87,7 +87,7 @@ export function ServicesSection() {
                   src={s.image}
                   alt={s.title}
                   fill
-                  unoptimized
+                  loading="lazy"
                   sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                   className="object-cover"
                 />
