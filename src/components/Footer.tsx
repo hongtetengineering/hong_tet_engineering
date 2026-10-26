@@ -45,7 +45,7 @@ export function Footer() {
         {/* Middle Navigation & Brand Row */}
         <div className="py-8 flex flex-col md:flex-row items-center justify-between gap-6">
           <Link
-            href="/"
+            href="/#top"
             className="flex flex-col sm:flex-row items-center gap-3 text-center sm:text-left group cursor-pointer"
             title="Hong Tet Engineering - Home"
           >
@@ -68,7 +68,7 @@ export function Footer() {
           </Link>
 
           <div className="flex flex-wrap items-center justify-center gap-3.5 sm:gap-6 text-xs font-semibold text-neutral-600">
-            <Link href="/" className="hover:text-[#FA551E] transition-colors py-1">
+            <Link href="/#top" className="hover:text-[#FA551E] transition-colors py-1">
               Home
             </Link>
             <Link

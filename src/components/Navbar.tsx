@@ -12,7 +12,16 @@ export function Navbar() {
     <div className="w-full pt-4 sm:pt-6 px-4 sm:px-6 relative z-50">
       <header className="max-w-[1120px] mx-auto bg-white/95 backdrop-blur-md rounded-full shadow-[0_4px_24px_rgba(0,0,0,0.06)] border border-neutral-200/80 px-5 sm:px-7 h-16 sm:h-[68px] flex items-center justify-between transition-all">
         {/* Brand / Logo */}
-        <Link href="/" className="flex items-center gap-3 group cursor-pointer" title="Hong Tet Engineering - Home">
+        <Link
+          href="/#top"
+          onClick={() => {
+            if (typeof window !== "undefined") {
+              window.scrollTo({ top: 0, behavior: "smooth" });
+            }
+          }}
+          className="flex items-center gap-3 group cursor-pointer"
+          title="Hong Tet Engineering - Home"
+        >
           <div className="relative h-10 sm:h-11 w-32 sm:w-36">
             <Image
               src="/logo/full-logo-transparent.webp"
@@ -27,7 +36,12 @@ export function Navbar() {
         {/* Center Nav Links */}
         <nav className="hidden md:flex items-center gap-7 lg:gap-8 text-[14px] font-medium text-neutral-700">
           <Link
-            href="/"
+            href="/#top"
+            onClick={() => {
+              if (typeof window !== "undefined") {
+                window.scrollTo({ top: 0, behavior: "smooth" });
+              }
+            }}
             className="hover:text-[#FA551E] transition-colors"
           >
             Home
@@ -90,8 +104,13 @@ export function Navbar() {
         <div className="md:hidden max-w-[1120px] mx-auto mt-2 bg-white rounded-3xl shadow-xl border border-neutral-200 p-6 space-y-4 animate-in slide-in-from-top-2 duration-200">
           <div className="flex flex-col space-y-3 font-semibold text-sm text-neutral-800">
             <Link
-              href="/"
-              onClick={() => setMobileMenuOpen(false)}
+              href="/#top"
+              onClick={() => {
+                setMobileMenuOpen(false);
+                if (typeof window !== "undefined") {
+                  window.scrollTo({ top: 0, behavior: "smooth" });
+                }
+              }}
               className="py-1 hover:text-[#FA551E]"
             >
               Home

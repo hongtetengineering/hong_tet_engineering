@@ -212,7 +212,7 @@ export function HeroSection() {
         {/* Centered Brand Mark / Logo */}
         <div className="text-center">
           <Link
-            href="/"
+            href="/#top"
             className="inline-flex items-center gap-3 justify-center mb-4 hover:scale-102 transition-transform cursor-pointer"
             title="Hong Tet Engineering - Home"
           >

@@ -38,7 +38,7 @@ export function UnderDevelopment({
         {/* Action Buttons */}
         <div className="mt-8 sm:mt-10 flex flex-wrap items-center justify-center gap-3 sm:gap-4">
           <Link
-            href="/"
+            href="/#top"
             className="inline-flex items-center gap-2 px-6 sm:px-7 py-3 sm:py-3.5 rounded-full bg-[#FA551E] hover:bg-[#e0430f] text-white text-xs sm:text-sm font-bold tracking-wide shadow-md transition-all active:scale-[0.98]"
           >
             <ArrowLeft className="w-4 h-4" />

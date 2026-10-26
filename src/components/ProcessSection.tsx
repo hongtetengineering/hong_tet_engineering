@@ -1,5 +1,8 @@
+"use client";
+
 import Image from "next/image";
 import { Star, ShieldCheck } from "lucide-react";
+import { motion } from "framer-motion";
 
 export function ProcessSection() {
   const steps = [
@@ -43,9 +46,15 @@ export function ProcessSection() {
     <section id="process" className="bg-white py-20 sm:py-28 lg:py-32 relative">
       <div className="max-w-[1240px] mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 xl:gap-20 items-start">
-          {/* Left Column (Sticky) */}
-          <div className="lg:col-span-5 lg:sticky lg:top-24 xl:top-28">
-            {/* Main Heading - Strictly 1 line, NO eyebrow above */}
+          {/* Left Column (Sticky on Desktop) */}
+          <motion.div
+            initial={{ opacity: 0, x: -24 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            viewport={{ once: true, amount: 0.2 }}
+            transition={{ duration: 0.6, ease: "easeOut" }}
+            className="lg:col-span-5 lg:sticky lg:top-24 xl:top-28"
+          >
+            {/* Main Heading - Strictly 1 line */}
             <h2 className="text-xl min-[390px]:text-2xl sm:text-4xl lg:text-5xl font-bold tracking-tight text-neutral-950 leading-tight whitespace-nowrap mb-2.5 sm:mb-4">
               Our Work Process
             </h2>
@@ -56,7 +65,10 @@ export function ProcessSection() {
             </p>
 
             {/* Orange Licensed Card */}
-            <div className="rounded-3xl bg-[#FA551E] text-white p-5 sm:p-7 shadow-xl shadow-orange-500/10">
+            <motion.div
+              whileHover={{ y: -4, transition: { duration: 0.25 } }}
+              className="rounded-3xl bg-[#FA551E] text-white p-5 sm:p-7 shadow-xl shadow-orange-500/15 cursor-default"
+            >
               {/* Inner Top Pill */}
               <div className="rounded-2xl bg-black/12 p-3 sm:p-3.5 flex items-center gap-3 sm:gap-3.5">
                 <div className="w-8 h-8 sm:w-9 sm:h-9 rounded-xl border border-white/40 flex items-center justify-center shrink-0">
@@ -114,28 +126,32 @@ export function ProcessSection() {
                   </span>
                 </div>
               </div>
-            </div>
-          </div>
+            </motion.div>
+          </motion.div>
 
-          {/* Right Column (Steps with Vertical Line Directly Underneath Numbers) */}
+          {/* Right Column (Steps with Vertical Line & Scroll Reveal) */}
           <div className="lg:col-span-7">
-            <div>
-              {steps.map((st) => (
-                <div
+            <div className="space-y-2 sm:space-y-4">
+              {steps.map((st, i) => (
+                <motion.div
                   key={st.num}
-                  className="flex items-start gap-4 sm:gap-7 lg:gap-9"
+                  initial={{ opacity: 0, y: 36 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true, amount: 0.2 }}
+                  transition={{ duration: 0.55, delay: i * 0.08, ease: "easeOut" }}
+                  className="flex items-start gap-4 sm:gap-7 lg:gap-9 group"
                 >
-                  {/* Left: Number + Vertical Line directly underneath extending down */}
+                  {/* Left: Number + Vertical Line directly underneath */}
                   <div className="flex flex-col items-center shrink-0 w-9 sm:w-14 lg:w-16 self-stretch">
-                    <span className="text-2xl sm:text-4xl lg:text-5xl font-bold text-neutral-900 tracking-tight leading-none block select-none">
+                    <span className="text-2xl sm:text-4xl lg:text-5xl font-bold text-neutral-900 group-hover:text-[#FA551E] transition-colors tracking-tight leading-none block select-none">
                       {st.num}
                     </span>
-                    <div className="w-[1px] bg-neutral-200 flex-1 my-2.5 sm:my-4" />
+                    <div className="w-[1px] bg-neutral-200 group-hover:bg-[#FA551E]/40 transition-colors flex-1 my-2.5 sm:my-4" />
                   </div>
 
                   {/* Right: Step Content */}
                   <div className="flex-1 min-w-0 pb-8 sm:pb-14 lg:pb-18">
-                    <h3 className="text-lg sm:text-2xl lg:text-3xl font-bold text-neutral-900 tracking-tight">
+                    <h3 className="text-lg sm:text-2xl lg:text-3xl font-bold text-neutral-900 tracking-tight group-hover:text-[#FA551E] transition-colors">
                       {st.title}
                     </h3>
 
@@ -148,12 +164,12 @@ export function ProcessSection() {
                         src={st.img}
                         alt={st.alt}
                         fill
-                        className="object-cover hover:scale-102 transition-transform duration-500"
+                        className="object-cover group-hover:scale-104 transition-transform duration-700 ease-out"
                         sizes="(max-width: 1024px) 100vw, 50vw"
                       />
                     </div>
                   </div>
-                </div>
+                </motion.div>
               ))}
             </div>
           </div>
@@ -162,4 +178,3 @@ export function ProcessSection() {
     </section>
   );
 }
-
