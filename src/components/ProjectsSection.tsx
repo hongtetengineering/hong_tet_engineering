@@ -2,7 +2,8 @@
 
 import { useRef } from "react";
 import Image from "next/image";
-import { Calendar, Building2, Clock, TrendingUp, CheckCircle } from "lucide-react";
+import Link from "next/link";
+import { Calendar, Building2, Clock, TrendingUp, CheckCircle, ArrowRight } from "lucide-react";
 import { motion, useScroll, useTransform, MotionValue } from "framer-motion";
 
 const projects = [
@@ -196,6 +197,17 @@ export function ProjectsSection() {
               />
             );
           })}
+        </div>
+
+        {/* Link to all projects */}
+        <div className="mt-10 sm:mt-12 text-center">
+          <Link
+            href="/projects"
+            className="inline-flex items-center gap-2 px-6 py-3 rounded-full bg-white/10 hover:bg-white/15 text-white border border-white/20 text-xs sm:text-sm font-bold tracking-wide transition-all shadow-sm"
+          >
+            <span>Explore All Engineering Case Studies & Gallery</span>
+            <ArrowRight className="w-4 h-4 text-[#FA551E]" />
+          </Link>
         </div>
 
         {/* 3 Metric Pills */}

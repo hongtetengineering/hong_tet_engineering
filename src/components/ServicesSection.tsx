@@ -1,9 +1,12 @@
 import Image from "next/image";
+import Link from "next/link";
+import { ArrowRight } from "lucide-react";
 
 export function ServicesSection() {
   const services = [
     {
       id: "01",
+      anchor: "metal-structures",
       title: "Metal Structure Fabrication & I-Beams",
       desc: "Complete fabrication and erection of structural steel frameworks, industrial I-beam framing, warehouse supports, and custom components tailored to Singapore project specs.",
       image: "/services/stock-image/factory-worker-working-warehouse-handling-metal-material-production.jpg",
@@ -11,6 +14,7 @@ export function ServicesSection() {
     },
     {
       id: "02",
+      anchor: "roofing-shelters",
       title: "Roofing & Shelter Solutions",
       desc: "Weatherproof industrial roofing and canopy installations built for tropical durability using zinc sheets, clay roof tiles, polycarbonate skylights, and composite panels.",
       image: "/services/stock-image/medium-shot-men-working-together.jpg",
@@ -18,6 +22,7 @@ export function ServicesSection() {
     },
     {
       id: "03",
+      anchor: "metal-stainless",
       title: "Metal & Stainless-Steel Works",
       desc: "Precision fabrication of architectural metal fittings built for safety compliance and refined finish: stainless-steel railings, heavy-duty main gates, and industrial staircases.",
       image: "/services/stock-image/worker-working-with-circular-grinder-metal-with-sparks.jpg",
@@ -25,6 +30,7 @@ export function ServicesSection() {
     },
     {
       id: "04",
+      anchor: "architectural-glass",
       title: "Architectural Glass Installation",
       desc: "Modern architectural glass solutions combining spatial elegance with strict safety standards: frameless glass doors, structural windows, and tempered glass balustrades.",
       image: "/services/stock-image/carpenter-holds-drill-drills-window.jpg",
@@ -32,6 +38,7 @@ export function ServicesSection() {
     },
     {
       id: "05",
+      anchor: "renovation-painting",
       title: "Renovation & Protective Painting",
       desc: "End-to-end spatial alterations, interior and exterior building renovation, and protective industrial-grade painting for homes, commercial offices, and factories.",
       image: "/services/stock-image/sideways-shot-busy-handyman-dressed-safety-uniform-holds-paint-roller-wears-protective-mask-works-hard-isolated-pink-wall-repair-renovation-concept-maintenance-worker.jpg",
@@ -39,6 +46,7 @@ export function ServicesSection() {
     },
     {
       id: "06",
+      anchor: "manpower-supply",
       title: "Skilled Manpower Supply",
       desc: "Certified, BCA-compliant engineering workforce including structural welders, metal fabricators, riggers, and site technicians deployed to meet site demands.",
       image: "/services/stock-image/confident-architect-smiling.jpg",
@@ -77,9 +85,11 @@ export function ServicesSection() {
         {/* Services Grid (3 cards per row: 2 rows of 3) */}
         <div className="mt-8 sm:mt-10 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 sm:gap-6">
           {services.map((s) => (
-            <div
+            <Link
               key={s.id}
-              className="relative h-[360px] sm:h-[420px] rounded-[24px] overflow-hidden border border-white/10 shadow-lg bg-neutral-900 flex flex-col justify-between"
+              href={`/services#${s.anchor}`}
+              className="group relative h-[360px] sm:h-[420px] rounded-[24px] overflow-hidden border border-white/10 shadow-lg bg-neutral-900 flex flex-col justify-between transition-transform duration-300 hover:scale-[1.01]"
+              title={`View ${s.title} specifications and scope`}
             >
               {/* Background Local Photo - optimized and direct for 60fps smooth scrolling */}
               <div className="absolute inset-0 w-full h-full z-0">
@@ -89,7 +99,7 @@ export function ServicesSection() {
                   fill
                   loading="lazy"
                   sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
-                  className="object-cover"
+                  className="object-cover group-hover:scale-105 transition-transform duration-500"
                 />
               </div>
 
@@ -112,20 +122,35 @@ export function ServicesSection() {
               <div className="relative z-20 p-5 sm:p-6 flex flex-col justify-end">
                 <h3
                   title={s.title}
-                  className="text-base sm:text-[17px] lg:text-[16px] xl:text-[18px] font-bold text-white tracking-tight leading-snug truncate"
+                  className="text-base sm:text-[17px] lg:text-[16px] xl:text-[18px] font-bold text-white tracking-tight leading-snug truncate group-hover:text-[#FA551E] transition-colors"
                 >
                   {s.title}
                 </h3>
                 <p className="mt-2 text-xs sm:text-sm text-neutral-300 leading-relaxed line-clamp-2 sm:line-clamp-3">
                   {s.desc}
                 </p>
+                <div className="mt-3 flex items-center gap-1.5 text-xs font-semibold text-[#FA551E] opacity-90 group-hover:opacity-100 transition-opacity">
+                  <span>Explore service scope</span>
+                  <ArrowRight className="w-3.5 h-3.5 group-hover:translate-x-1 transition-transform" />
+                </div>
               </div>
-            </div>
+            </Link>
           ))}
         </div>
 
+        {/* View All Services Action */}
+        <div className="mt-10 sm:mt-12 text-center">
+          <Link
+            href="/services"
+            className="inline-flex items-center gap-2 px-6 py-3 rounded-full bg-white/10 hover:bg-white/15 text-white border border-white/20 text-xs sm:text-sm font-bold tracking-wide transition-all shadow-sm"
+          >
+            <span>View Full Service Scope & Technical Specifications</span>
+            <ArrowRight className="w-4 h-4 text-[#FA551E]" />
+          </Link>
+        </div>
+
         {/* Bottom Banner Note */}
-        <div className="mt-12 sm:mt-14 text-center">
+        <div className="mt-8 sm:mt-10 text-center">
           <p className="text-xs sm:text-sm text-neutral-400 flex flex-col sm:flex-row items-center justify-center gap-1 sm:gap-1.5">
             <span>Ready to discuss your project?</span>
             <a

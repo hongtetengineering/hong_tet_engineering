@@ -57,7 +57,7 @@ export function TestimonialsSection() {
             <div className="relative w-3.5 h-3.5 shrink-0">
               <Image
                 src="/home/1ZWSzdE6ssdj1Lj7QdMU6YG77ps.png"
-                alt="Google Reviews"
+                alt="Client Reviews Rating Badge"
                 fill
                 loading="lazy"
                 sizes="16px"

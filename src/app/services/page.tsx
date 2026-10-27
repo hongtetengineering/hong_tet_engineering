@@ -2,39 +2,51 @@ import Image from "next/image";
 import Link from "next/link";
 import type { Metadata } from "next";
 import {
-  Wrench,
   ShieldCheck,
   CheckCircle2,
-  HardHat,
   ArrowRight,
   Phone,
   Mail,
   MapPin,
   Check,
   Layers,
-  Sparkles,
-  Building,
-  Hammer,
-  Users,
-  Compass,
   FileCheck,
 } from "lucide-react";
 import { Navbar } from "@/components/Navbar";
 import { Footer } from "@/components/Footer";
 import { MarqueeStrip } from "@/components/MarqueeStrip";
+import { siteConfig } from "@/lib/site-config";
+import { getBreadcrumbSchema, getServiceSchema } from "@/lib/schema";
 
 export const metadata: Metadata = {
-  title: "Engineering Services | HONG TET ENGINEERING (S) PTE. LTD.",
+  title: "Engineering Services Singapore | Structural Steel, Roofing & Fabrication",
   description:
     "Explore professional engineering services in Singapore: structural steel I-beams, roofing & shelters, stainless-steel works, architectural glass, renovation, and BCA skilled manpower. Call +65 9898 9760.",
+  alternates: {
+    canonical: `${siteConfig.url}/services`,
+  },
+  openGraph: {
+    title: "Engineering Services Singapore | HONG TET ENGINEERING (S) PTE. LTD.",
+    description:
+      "Comprehensive structural steel fabrication, roofing solutions, architectural metal fittings, and BCA-compliant site manpower across Singapore.",
+    url: `${siteConfig.url}/services`,
+    images: [
+      {
+        url: siteConfig.assets.ogImage,
+        width: 1200,
+        height: 630,
+        alt: "Hong Tet Engineering Services Singapore",
+      },
+    ],
+  },
   keywords: [
     "Singapore Engineering Services",
     "Metal Structure Fabrication Singapore",
-    "I-Beam Installation",
+    "I-Beam Installation Singapore",
     "Industrial Roofing Singapore",
-    "Stainless Steel Railing Contractor",
+    "Stainless Steel Railing Contractor Singapore",
     "Glass Installation Singapore",
-    "BCA Skilled Manpower Supply",
+    "BCA Skilled Manpower Supply Singapore",
   ],
 };
 
@@ -188,11 +200,36 @@ export default function ServicesPage() {
     },
   ];
 
+  const breadcrumbSchema = getBreadcrumbSchema([
+    { name: "Home", url: "/" },
+    { name: "Services", url: "/services" },
+  ]);
+
+  const serviceSchemas = services.map((s) =>
+    getServiceSchema({
+      name: s.title,
+      description: s.shortDesc,
+      slug: s.anchor,
+    })
+  );
+
   return (
     <div
       className="min-h-screen bg-[#FBF9F5] text-neutral-900 selection:bg-[#FA551E] selection:text-white"
       id="top"
     >
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
+      />
+      {serviceSchemas.map((schema, idx) => (
+        <script
+          key={idx}
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }}
+        />
+      ))}
+
       {/* Navigation */}
       <Navbar />
 
@@ -224,14 +261,6 @@ export default function ServicesPage() {
             />
 
             <div className="relative z-10 max-w-[1240px] mx-auto px-4 sm:px-6 text-center">
-              {/* Eyebrow Badge */}
-              <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-white/90 backdrop-blur-xs border border-neutral-200/90 shadow-2xs mb-5">
-                <span className="w-2 h-2 rounded-full bg-[#FA551E] animate-pulse" />
-                <span className="text-xs font-bold text-neutral-800 tracking-wider uppercase">
-                  Comprehensive Engineering Capabilities
-                </span>
-              </div>
-
               {/* Main Heading */}
               <h1 className="text-3xl min-[380px]:text-4xl sm:text-6xl md:text-7xl lg:text-[76px] font-black tracking-tight text-neutral-900 leading-[1.05] max-w-5xl mx-auto">
                 Engineering & Construction <br className="hidden sm:inline" />
@@ -244,16 +273,16 @@ export default function ServicesPage() {
               </p>
 
               {/* Quick CTAs */}
-              <div className="mt-7 sm:mt-9 flex flex-wrap items-center justify-center gap-3.5 sm:gap-4">
+              <div className="mt-7 sm:mt-9 flex flex-col sm:flex-row items-stretch sm:items-center justify-center gap-3 sm:gap-4 max-w-xs sm:max-w-none mx-auto">
                 <Link
                   href="/#contact"
-                  className="px-7 sm:px-8 py-3 sm:py-3.5 rounded-full bg-[#FA551E] hover:bg-[#e0430f] text-white text-xs sm:text-sm font-bold tracking-wide shadow-md hover:shadow-lg transition-all active:scale-[0.98]"
+                  className="w-full sm:w-auto px-7 sm:px-8 py-3 sm:py-3.5 rounded-full bg-[#FA551E] hover:bg-[#e0430f] text-white text-xs sm:text-sm font-bold tracking-wide shadow-md hover:shadow-lg transition-all active:scale-[0.98] text-center"
                 >
                   Request a Quote
                 </Link>
                 <a
                   href="tel:+6598989760"
-                  className="px-7 sm:px-8 py-3 sm:py-3.5 rounded-full bg-white hover:bg-neutral-50 text-neutral-900 text-xs sm:text-sm font-bold tracking-wide border border-neutral-300 shadow-2xs hover:shadow-xs transition-all active:scale-[0.98]"
+                  className="w-full sm:w-auto px-7 sm:px-8 py-3 sm:py-3.5 rounded-full bg-white hover:bg-neutral-50 text-neutral-900 text-xs sm:text-sm font-bold tracking-wide border border-neutral-300 shadow-2xs hover:shadow-xs transition-all active:scale-[0.98] text-center"
                 >
                   Call +65 9898 9760
                 </a>
@@ -281,7 +310,7 @@ export default function ServicesPage() {
         <section className="bg-white py-16 sm:py-24 relative overflow-hidden border-b border-neutral-200/80">
           <div className="max-w-[1240px] mx-auto px-4 sm:px-6">
             <div className="text-center max-w-3xl mx-auto mb-10 sm:mb-14">
-              <h2 className="text-xl min-[390px]:text-2xl sm:text-4xl lg:text-5xl font-bold tracking-tight text-neutral-950 leading-tight whitespace-nowrap">
+              <h2 className="text-xl min-[390px]:text-2xl sm:text-4xl lg:text-5xl font-bold tracking-tight text-neutral-950 leading-tight">
                 Our 6 Core Disciplines
               </h2>
               <p className="mt-3 sm:mt-4 text-xs sm:text-base text-neutral-600 leading-relaxed max-w-xl mx-auto">
@@ -363,7 +392,7 @@ export default function ServicesPage() {
         <section className="bg-[#FAF9F6] border-b border-neutral-200/80 py-16 sm:py-24">
           <div className="max-w-[1240px] mx-auto px-4 sm:px-6">
           <div className="text-center max-w-3xl mx-auto mb-14 sm:mb-20">
-            <h2 className="text-xl min-[390px]:text-2xl sm:text-4xl lg:text-5xl font-bold tracking-tight text-neutral-950 leading-tight whitespace-nowrap">
+            <h2 className="text-xl min-[390px]:text-2xl sm:text-4xl lg:text-5xl font-bold tracking-tight text-neutral-950 leading-tight">
               Detailed Scope & Technical Specifications
             </h2>
             <p className="mt-3 sm:mt-4 text-xs sm:text-base text-neutral-600 leading-relaxed max-w-xl mx-auto">
@@ -486,7 +515,7 @@ export default function ServicesPage() {
         <section className="bg-[#FAF9F6] border-y border-neutral-200/80 py-16 sm:py-24">
           <div className="max-w-[1240px] mx-auto px-4 sm:px-6">
             <div className="text-center max-w-3xl mx-auto mb-12 sm:mb-16">
-              <h2 className="text-xl min-[390px]:text-2xl sm:text-4xl lg:text-5xl font-bold tracking-tight text-neutral-950 leading-tight whitespace-nowrap">
+              <h2 className="text-xl min-[390px]:text-2xl sm:text-4xl lg:text-5xl font-bold tracking-tight text-neutral-950 leading-tight">
                 Why Choose HONG TET ENGINEERING?
               </h2>
               <p className="mt-3 sm:mt-4 text-xs sm:text-base text-neutral-600 leading-relaxed max-w-xl mx-auto">
@@ -557,10 +586,10 @@ export default function ServicesPage() {
                 </div>
               </div>
 
-              <div className="mt-8 flex flex-wrap items-center gap-3">
+              <div className="mt-8 flex flex-col sm:flex-row items-stretch sm:items-center gap-3">
                 <a
                   href="tel:+6598989760"
-                  className="inline-flex items-center gap-2 px-6 py-3 rounded-full bg-white text-[#FA551E] text-xs sm:text-sm font-bold shadow-xs hover:bg-neutral-50 transition-colors"
+                  className="inline-flex items-center justify-center gap-2 px-6 py-3.5 rounded-full bg-white text-[#FA551E] text-xs sm:text-sm font-bold shadow-xs hover:bg-neutral-50 transition-colors text-center"
                 >
                   <Phone className="w-4 h-4 fill-[#FA551E]" />
                   <span>Call +65 9898 9760</span>
@@ -569,7 +598,7 @@ export default function ServicesPage() {
                   href="https://wa.me/6598989760"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="inline-flex items-center gap-2 px-6 py-3 rounded-full bg-neutral-900 hover:bg-black text-white text-xs sm:text-sm font-bold shadow-xs transition-colors"
+                  className="inline-flex items-center justify-center gap-2 px-6 py-3.5 rounded-full bg-neutral-900 hover:bg-black text-white text-xs sm:text-sm font-bold shadow-xs transition-colors text-center"
                 >
                   <span>Chat on WhatsApp</span>
                 </a>

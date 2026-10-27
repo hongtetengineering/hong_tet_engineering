@@ -32,7 +32,7 @@ export function ServiceAreaSection() {
             {/* Map Background Image */}
             <Image
               src="/home/bTKcWRZFnXXRl0SfE0GiqJWx90Q.png"
-              alt="Service Area Map"
+              alt="Hong Tet Engineering Service Area Map Singapore"
               fill
               loading="lazy"
               className="object-cover"

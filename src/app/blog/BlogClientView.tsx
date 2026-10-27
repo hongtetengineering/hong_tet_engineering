@@ -78,14 +78,6 @@ export function BlogClientView({
             />
 
             <div className="relative z-10 max-w-[1240px] mx-auto px-4 sm:px-6 text-center">
-              {/* Eyebrow Badge */}
-              <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-white/90 backdrop-blur-xs border border-neutral-200/90 shadow-2xs mb-5">
-                <span className="w-2 h-2 rounded-full bg-[#FA551E] animate-pulse" />
-                <span className="text-xs font-bold text-neutral-800 tracking-wider uppercase">
-                  Engineering Insights & Technical Articles
-                </span>
-              </div>
-
               {/* Main Heading */}
               <h1 className="text-3xl min-[380px]:text-4xl sm:text-6xl md:text-7xl lg:text-[76px] font-black tracking-tight text-neutral-900 leading-[1.05] max-w-5xl mx-auto">
                 Engineering Knowledge. <br className="hidden sm:inline" />
@@ -169,7 +161,7 @@ export function BlogClientView({
                     </p>
                   </div>
 
-                  <div className="pt-4 border-t border-neutral-100 flex items-center justify-between">
+                  <div className="pt-4 border-t border-neutral-100 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-2.5">
                     <span className="text-xs font-semibold text-neutral-500">
                       By {featuredPost.author}
                     </span>
@@ -334,17 +326,17 @@ export function BlogClientView({
               </p>
             </div>
 
-            <div className="flex flex-wrap items-center gap-3 shrink-0">
+            <div className="flex flex-col sm:flex-row items-stretch sm:items-center gap-3 shrink-0 w-full md:w-auto">
               <a
                 href="tel:+6598989760"
-                className="inline-flex items-center gap-2 px-6 py-3 rounded-full bg-white text-[#FA551E] text-xs sm:text-sm font-bold shadow-xs hover:bg-neutral-50 transition-colors"
+                className="inline-flex items-center justify-center gap-2 px-6 py-3.5 rounded-full bg-white text-[#FA551E] text-xs sm:text-sm font-bold shadow-xs hover:bg-neutral-50 transition-colors text-center"
               >
                 <Phone className="w-4 h-4 fill-[#FA551E]" />
                 <span>+65 9898 9760</span>
               </a>
               <Link
                 href="/contact"
-                className="inline-flex items-center gap-2 px-6 py-3 rounded-full bg-neutral-900 hover:bg-black text-white text-xs sm:text-sm font-bold shadow-xs transition-colors"
+                className="inline-flex items-center justify-center gap-2 px-6 py-3.5 rounded-full bg-neutral-900 hover:bg-black text-white text-xs sm:text-sm font-bold shadow-xs transition-colors text-center"
               >
                 <span>Request a Quote</span>
               </Link>

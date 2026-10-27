@@ -1,6 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
-import { Check, CheckCircle2, Phone, Star } from "lucide-react";
+import { Check, CheckCircle2, Phone } from "lucide-react";
 
 // Traffic Cone Component with exact 3D styling, realistic perspective blur, and natural floating animation
 function TrafficCone({
@@ -177,6 +177,7 @@ export function HeroSection() {
         <div className="relative z-10 max-w-[1240px] mx-auto px-4 sm:px-6 text-center">
           <h1 className="text-4xl min-[380px]:text-5xl sm:text-7xl md:text-8xl lg:text-[112px] font-black tracking-tight text-neutral-900 leading-[0.96] select-none">
             Built To Last
+            <span className="sr-only"> — Structural Steel Fabrication & Engineering Services Singapore</span>
           </h1>
           <p className="mt-4 sm:mt-5 text-xs sm:text-base lg:text-xl text-neutral-600 font-normal leading-relaxed max-w-sm sm:max-w-xl mx-auto">
             Reliable structural steel fabrication, industrial roofing, metalworks, architectural glass, and skilled manpower solutions across Singapore.

@@ -176,14 +176,6 @@ export function ProjectsClientView() {
             />
 
             <div className="relative z-10 max-w-[1240px] mx-auto px-4 sm:px-6 text-center">
-              {/* Eyebrow Badge */}
-              <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-white/90 backdrop-blur-xs border border-neutral-200/90 shadow-2xs mb-5">
-                <span className="w-2 h-2 rounded-full bg-[#FA551E] animate-pulse" />
-                <span className="text-xs font-bold text-neutral-800 tracking-wider uppercase">
-                  Singapore Engineering & Fabrication Portfolio
-                </span>
-              </div>
-
               {/* Main Heading */}
               <h1 className="text-3xl min-[380px]:text-4xl sm:text-6xl md:text-7xl lg:text-[76px] font-black tracking-tight text-neutral-900 leading-[1.05] max-w-5xl mx-auto">
                 Proven Workmanship. <br className="hidden sm:inline" />
@@ -196,16 +188,16 @@ export function ProjectsClientView() {
               </p>
 
               {/* Quick CTAs */}
-              <div className="mt-7 sm:mt-9 flex flex-wrap items-center justify-center gap-3.5 sm:gap-4">
+              <div className="mt-7 sm:mt-9 flex flex-col sm:flex-row items-stretch sm:items-center justify-center gap-3 sm:gap-4 max-w-xs sm:max-w-none mx-auto">
                 <Link
                   href="/#contact"
-                  className="px-7 sm:px-8 py-3 sm:py-3.5 rounded-full bg-[#FA551E] hover:bg-[#e0430f] text-white text-xs sm:text-sm font-bold tracking-wide shadow-md hover:shadow-lg transition-all active:scale-[0.98]"
+                  className="w-full sm:w-auto px-7 sm:px-8 py-3 sm:py-3.5 rounded-full bg-[#FA551E] hover:bg-[#e0430f] text-white text-xs sm:text-sm font-bold tracking-wide shadow-md hover:shadow-lg transition-all active:scale-[0.98] text-center"
                 >
                   Request a Quote
                 </Link>
                 <a
                   href="tel:+6598989760"
-                  className="px-7 sm:px-8 py-3 sm:py-3.5 rounded-full bg-white hover:bg-neutral-50 text-neutral-900 text-xs sm:text-sm font-bold tracking-wide border border-neutral-300 shadow-2xs hover:shadow-xs transition-all active:scale-[0.98]"
+                  className="w-full sm:w-auto px-7 sm:px-8 py-3 sm:py-3.5 rounded-full bg-white hover:bg-neutral-50 text-neutral-900 text-xs sm:text-sm font-bold tracking-wide border border-neutral-300 shadow-2xs hover:shadow-xs transition-all active:scale-[0.98] text-center"
                 >
                   Call +65 9898 9760
                 </a>
@@ -240,7 +232,7 @@ export function ProjectsClientView() {
         <section className="py-16 sm:py-24 max-w-[1240px] mx-auto px-4 sm:px-6">
           {/* Header */}
           <div className="text-center max-w-3xl mx-auto mb-10 sm:mb-12">
-            <h2 className="text-xl min-[390px]:text-2xl sm:text-4xl lg:text-5xl font-bold tracking-tight text-neutral-950 leading-tight whitespace-nowrap">
+            <h2 className="text-xl min-[390px]:text-2xl sm:text-4xl lg:text-5xl font-bold tracking-tight text-neutral-950 leading-tight">
               Featured Case Studies
             </h2>
             <p className="mt-3 sm:mt-4 text-xs sm:text-base text-neutral-600 leading-relaxed max-w-xl mx-auto">
@@ -339,7 +331,7 @@ export function ProjectsClientView() {
                 </div>
 
                 {/* Footer Action */}
-                <div className="px-6 sm:px-7 pb-6 pt-2 border-t border-neutral-100 flex items-center justify-between">
+                <div className="px-5 sm:px-7 pb-5 sm:pb-6 pt-3 border-t border-neutral-100 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-2">
                   <span className="text-[11px] font-bold text-neutral-400 uppercase tracking-wider">
                     Completed & Handed Over
                   </span>
@@ -370,7 +362,7 @@ export function ProjectsClientView() {
         <section className="bg-[#08090C] text-white py-16 sm:py-24 relative overflow-hidden">
           <div className="max-w-[1240px] mx-auto px-4 sm:px-6">
             <div className="text-center max-w-3xl mx-auto mb-12 sm:mb-16">
-              <h2 className="text-xl min-[390px]:text-2xl sm:text-4xl lg:text-5xl font-bold tracking-tight text-white leading-tight whitespace-nowrap">
+              <h2 className="text-xl min-[390px]:text-2xl sm:text-4xl lg:text-5xl font-bold tracking-tight text-white leading-tight">
                 How We Deliver Every Build Safely
               </h2>
               <p className="mt-3 sm:mt-4 text-xs sm:text-base text-neutral-400 leading-relaxed max-w-xl mx-auto">
@@ -469,10 +461,10 @@ export function ProjectsClientView() {
                 </div>
               </div>
 
-              <div className="mt-8 flex flex-wrap items-center gap-3">
+              <div className="mt-8 flex flex-col sm:flex-row items-stretch sm:items-center gap-3">
                 <a
                   href="tel:+6598989760"
-                  className="inline-flex items-center gap-2 px-6 py-3 rounded-full bg-white text-[#FA551E] text-xs sm:text-sm font-bold shadow-xs hover:bg-neutral-50 transition-colors"
+                  className="inline-flex items-center justify-center gap-2 px-6 py-3.5 rounded-full bg-white text-[#FA551E] text-xs sm:text-sm font-bold shadow-xs hover:bg-neutral-50 transition-colors text-center"
                 >
                   <Phone className="w-4 h-4 fill-[#FA551E]" />
                   <span>Call +65 9898 9760</span>
@@ -481,7 +473,7 @@ export function ProjectsClientView() {
                   href="https://wa.me/6598989760"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="inline-flex items-center gap-2 px-6 py-3 rounded-full bg-neutral-900 hover:bg-black text-white text-xs sm:text-sm font-bold shadow-xs transition-colors"
+                  className="inline-flex items-center justify-center gap-2 px-6 py-3.5 rounded-full bg-neutral-900 hover:bg-black text-white text-xs sm:text-sm font-bold shadow-xs transition-colors text-center"
                 >
                   <span>Chat on WhatsApp</span>
                 </a>

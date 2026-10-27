@@ -76,14 +76,6 @@ export function ContactClientView() {
             />
 
             <div className="relative z-10 max-w-[1240px] mx-auto px-4 sm:px-6 text-center">
-              {/* Eyebrow Badge */}
-              <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-white/90 backdrop-blur-xs border border-neutral-200/90 shadow-2xs mb-5">
-                <span className="w-2 h-2 rounded-full bg-[#FA551E] animate-pulse" />
-                <span className="text-xs font-bold text-neutral-800 tracking-wider uppercase">
-                  Singapore Engineering Consultation Desk
-                </span>
-              </div>
-
               {/* Main Heading */}
               <h1 className="text-3xl min-[380px]:text-4xl sm:text-6xl md:text-7xl lg:text-[76px] font-black tracking-tight text-neutral-900 leading-[1.05] max-w-5xl mx-auto">
                 Ready To Start Your Project? <br className="hidden sm:inline" />
@@ -96,10 +88,10 @@ export function ContactClientView() {
               </p>
 
               {/* Direct Communication Quick Badges */}
-              <div className="mt-8 sm:mt-10 flex flex-wrap items-center justify-center gap-3 sm:gap-4 text-xs font-semibold">
+              <div className="mt-8 sm:mt-10 flex flex-col sm:flex-row items-stretch sm:items-center justify-center gap-2.5 sm:gap-4 text-xs font-semibold max-w-sm sm:max-w-none mx-auto">
                 <a
                   href="tel:+6598989760"
-                  className="flex items-center gap-2 px-4 py-2 rounded-full bg-white text-neutral-800 border border-neutral-200/80 shadow-2xs hover:border-[#FA551E]/40 hover:text-[#FA551E] transition-all"
+                  className="flex items-center justify-center gap-2 px-4 py-2.5 rounded-full bg-white text-neutral-800 border border-neutral-200/80 shadow-2xs hover:border-[#FA551E]/40 hover:text-[#FA551E] transition-all text-center"
                 >
                   <Phone className="w-3.5 h-3.5 text-[#FA551E]" />
                   <span>Call: +65 9898 9760</span>
@@ -108,14 +100,14 @@ export function ContactClientView() {
                   href="https://wa.me/6598989760"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="flex items-center gap-2 px-4 py-2 rounded-full bg-white text-neutral-800 border border-neutral-200/80 shadow-2xs hover:border-[#FA551E]/40 hover:text-[#FA551E] transition-all"
+                  className="flex items-center justify-center gap-2 px-4 py-2.5 rounded-full bg-white text-neutral-800 border border-neutral-200/80 shadow-2xs hover:border-[#FA551E]/40 hover:text-[#FA551E] transition-all text-center"
                 >
                   <MessageSquare className="w-3.5 h-3.5 text-emerald-600" />
                   <span>WhatsApp: +65 9898 9760</span>
                 </a>
                 <a
                   href="mailto:renumohal1995@gmail.com"
-                  className="flex items-center gap-2 px-4 py-2 rounded-full bg-white text-neutral-800 border border-neutral-200/80 shadow-2xs hover:border-[#FA551E]/40 hover:text-[#FA551E] transition-all"
+                  className="flex items-center justify-center gap-2 px-4 py-2.5 rounded-full bg-white text-neutral-800 border border-neutral-200/80 shadow-2xs hover:border-[#FA551E]/40 hover:text-[#FA551E] transition-all break-all text-center"
                 >
                   <Mail className="w-3.5 h-3.5 text-[#FA551E]" />
                   <span>renumohal1995@gmail.com</span>
@@ -283,17 +275,17 @@ export function ContactClientView() {
                     Your project details have been successfully prepared. You can connect with our Singapore engineering desk immediately via WhatsApp or phone.
                   </p>
 
-                  <div className="mt-6 flex flex-wrap items-center justify-center gap-3">
+                  <div className="mt-6 flex flex-col sm:flex-row items-stretch sm:items-center justify-center gap-3">
                     <button
                       onClick={openWhatsApp}
-                      className="inline-flex items-center gap-2 px-6 py-3 rounded-full bg-emerald-600 hover:bg-emerald-500 text-white text-xs font-bold shadow-xs transition-colors cursor-pointer"
+                      className="inline-flex items-center justify-center gap-2 px-6 py-3.5 rounded-full bg-emerald-600 hover:bg-emerald-500 text-white text-xs font-bold shadow-xs transition-colors cursor-pointer text-center"
                     >
                       <MessageSquare className="w-4 h-4" />
                       <span>Send via WhatsApp</span>
                     </button>
                     <a
                       href="tel:+6598989760"
-                      className="inline-flex items-center gap-2 px-6 py-3 rounded-full bg-[#FA551E] hover:bg-[#e0430f] text-white text-xs font-bold shadow-xs transition-colors"
+                      className="inline-flex items-center justify-center gap-2 px-6 py-3.5 rounded-full bg-[#FA551E] hover:bg-[#e0430f] text-white text-xs font-bold shadow-xs transition-colors text-center"
                     >
                       <Phone className="w-4 h-4" />
                       <span>Call +65 9898 9760</span>
@@ -322,7 +314,7 @@ export function ContactClientView() {
                         onChange={(e) =>
                           setFormData({ ...formData, name: e.target.value })
                         }
-                        className="w-full px-4 py-3 rounded-xl bg-neutral-50 border border-neutral-300 text-neutral-900 placeholder-neutral-400 text-sm focus:outline-none focus:border-[#FA551E] focus:bg-white transition-colors"
+                        className="w-full px-4 py-3 rounded-xl bg-neutral-50 border border-neutral-300 text-neutral-900 placeholder-neutral-400 text-base sm:text-sm focus:outline-none focus:border-[#FA551E] focus:bg-white transition-colors"
                       />
                     </div>
                     <div>
@@ -337,7 +329,7 @@ export function ContactClientView() {
                         onChange={(e) =>
                           setFormData({ ...formData, phone: e.target.value })
                         }
-                        className="w-full px-4 py-3 rounded-xl bg-neutral-50 border border-neutral-300 text-neutral-900 placeholder-neutral-400 text-sm focus:outline-none focus:border-[#FA551E] focus:bg-white transition-colors"
+                        className="w-full px-4 py-3 rounded-xl bg-neutral-50 border border-neutral-300 text-neutral-900 placeholder-neutral-400 text-base sm:text-sm focus:outline-none focus:border-[#FA551E] focus:bg-white transition-colors"
                       />
                     </div>
                   </div>

@@ -9,14 +9,12 @@ import {
   ArrowLeft,
   Phone,
   MessageSquare,
-  Share2,
-  Building2,
-  CheckCircle2,
   MapPin,
-  Check,
 } from "lucide-react";
 import { MDXRemote } from "next-mdx-remote/rsc";
 import { getAllPosts, getPostBySlug } from "@/lib/blog";
+import { siteConfig } from "@/lib/site-config";
+import { getArticleSchema, getBreadcrumbSchema } from "@/lib/schema";
 import { Navbar } from "@/components/Navbar";
 import { Footer } from "@/components/Footer";
 import { MarqueeStrip } from "@/components/MarqueeStrip";
@@ -46,76 +44,101 @@ export async function generateMetadata({
     };
   }
 
+  const postUrl = `${siteConfig.url}/blog/${slug}`;
+  const postImage = post.image.startsWith("http")
+    ? post.image
+    : `${siteConfig.url}${post.image}`;
+
   return {
-    title: `${post.title} | HONG TET ENGINEERING (S) PTE. LTD.`,
+    title: post.title,
     description: post.excerpt,
+    alternates: {
+      canonical: postUrl,
+    },
     openGraph: {
       title: post.title,
       description: post.excerpt,
-      images: [post.image],
+      url: postUrl,
+      images: [
+        {
+          url: postImage,
+          alt: post.title,
+        },
+      ],
       type: "article",
       publishedTime: post.date,
       authors: [post.author],
     },
+    twitter: {
+      card: "summary_large_image",
+      title: post.title,
+      description: post.excerpt,
+      images: [postImage],
+    },
   };
 }
 
+import type { ComponentPropsWithoutRef } from "react";
+
 // Custom styled MDX components adhering strictly to design system tokens
+// Notice: MDX top header is rendered as H2 to guarantee a single semantic H1 on the page (matching the hero post title)
 const mdxComponents = {
-  h1: (props: any) => (
-    <h1
-      className="text-2xl sm:text-3xl lg:text-4xl font-extrabold text-neutral-900 tracking-tight leading-tight mt-10 mb-5"
+  h1: (props: ComponentPropsWithoutRef<"h1">) => (
+    <h2
+      className="text-2xl sm:text-3xl lg:text-4xl font-extrabold text-neutral-900 tracking-tight leading-tight mt-10 mb-5 border-b border-neutral-200/80 pb-3"
       {...props}
     />
   ),
-  h2: (props: any) => (
+  h2: (props: ComponentPropsWithoutRef<"h2">) => (
     <h2
       className="text-xl sm:text-2xl font-bold text-neutral-900 tracking-tight leading-snug border-b border-neutral-200/80 pb-2 mt-9 mb-4 flex items-center gap-2"
       {...props}
     />
   ),
-  h3: (props: any) => (
+  h3: (props: ComponentPropsWithoutRef<"h3">) => (
     <h3
       className="text-lg sm:text-xl font-bold text-neutral-900 tracking-tight mt-7 mb-3"
       {...props}
     />
   ),
-  p: (props: any) => (
+  p: (props: ComponentPropsWithoutRef<"p">) => (
     <p
       className="text-sm sm:text-base text-neutral-700 leading-relaxed my-4"
       {...props}
     />
   ),
-  ul: (props: any) => (
+  ul: (props: ComponentPropsWithoutRef<"ul">) => (
     <ul
       className="list-disc pl-6 my-4 space-y-2 text-sm sm:text-base text-neutral-700"
       {...props}
     />
   ),
-  ol: (props: any) => (
+  ol: (props: ComponentPropsWithoutRef<"ol">) => (
     <ol
       className="list-decimal pl-6 my-4 space-y-2 text-sm sm:text-base text-neutral-700"
       {...props}
     />
   ),
-  li: (props: any) => <li className="leading-relaxed" {...props} />,
-  blockquote: (props: any) => (
+  li: (props: ComponentPropsWithoutRef<"li">) => (
+    <li className="leading-relaxed" {...props} />
+  ),
+  blockquote: (props: ComponentPropsWithoutRef<"blockquote">) => (
     <blockquote
       className="p-4 sm:p-5 my-6 rounded-2xl bg-neutral-50 border-l-4 border-[#FA551E] text-neutral-800 italic text-sm sm:text-base shadow-2xs"
       {...props}
     />
   ),
   hr: () => <hr className="my-8 border-neutral-200" />,
-  a: (props: any) => (
+  a: (props: ComponentPropsWithoutRef<"a">) => (
     <a
       className="text-[#FA551E] font-semibold underline underline-offset-4 hover:text-[#e0430f] transition-colors"
       {...props}
     />
   ),
-  strong: (props: any) => (
+  strong: (props: ComponentPropsWithoutRef<"strong">) => (
     <strong className="font-bold text-neutral-900" {...props} />
   ),
-  code: (props: any) => (
+  code: (props: ComponentPropsWithoutRef<"code">) => (
     <code
       className="px-1.5 py-0.5 rounded-md bg-neutral-100 text-neutral-800 text-xs sm:text-sm font-mono border border-neutral-200"
       {...props}
@@ -162,8 +185,32 @@ async function BlogPostDetail({ params }: PostPageProps) {
     notFound();
   }
 
+  const breadcrumbSchema = getBreadcrumbSchema([
+    { name: "Home", url: "/" },
+    { name: "Blog", url: "/blog" },
+    { name: post.title, url: `/blog/${slug}` },
+  ]);
+
+  const articleSchema = getArticleSchema({
+    title: post.title,
+    description: post.excerpt,
+    slug,
+    datePublished: post.date,
+    image: post.image,
+    author: post.author,
+  });
+
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(articleSchema) }}
+      />
+
       {/* =========================================================================
           1. POST HEADER (Clean & elegant blueprint style)
           ========================================================================= */}
@@ -200,11 +247,8 @@ async function BlogPostDetail({ params }: PostPageProps) {
               <span>Back to All Articles</span>
             </Link>
 
-            {/* Category & Metadata */}
+            {/* Article Metadata */}
             <div className="flex flex-wrap items-center gap-3 mb-4">
-              <span className="text-[11px] font-bold px-3 py-1 rounded-full bg-[#FA551E] text-white shadow-2xs">
-                {post.category}
-              </span>
               <span className="flex items-center gap-1.5 text-xs font-semibold text-neutral-600">
                 <Calendar className="w-3.5 h-3.5 text-[#FA551E]" />
                 <span>{post.date}</span>
@@ -227,7 +271,7 @@ async function BlogPostDetail({ params }: PostPageProps) {
             </p>
 
             {/* Author Row */}
-            <div className="mt-6 pt-5 border-t border-neutral-200/80 flex items-center justify-between text-xs font-semibold text-neutral-700">
+            <div className="mt-6 pt-5 border-t border-neutral-200/80 flex flex-col sm:flex-row sm:items-center justify-between gap-2 text-xs font-semibold text-neutral-700">
               <div className="flex items-center gap-2">
                 <span className="w-2 h-2 rounded-full bg-[#FA551E]" />
                 <span>By {post.author}</span>
@@ -243,7 +287,7 @@ async function BlogPostDetail({ params }: PostPageProps) {
           ========================================================================= */}
       <article className="py-10 sm:py-16 max-w-[960px] mx-auto px-4 sm:px-6">
         {/* Main Cover Image */}
-        <div className="relative h-[280px] sm:h-[440px] md:h-[500px] w-full rounded-3xl overflow-hidden border border-neutral-200/90 shadow-sm bg-neutral-900 mb-10 sm:mb-14">
+        <div className="relative h-[200px] min-[390px]:h-[240px] sm:h-[400px] md:h-[480px] w-full rounded-2xl sm:rounded-3xl overflow-hidden border border-neutral-200/90 shadow-sm bg-neutral-900 mb-8 sm:mb-14">
           <Image
             src={post.image}
             alt={post.title}
@@ -307,10 +351,10 @@ async function BlogPostDetail({ params }: PostPageProps) {
             </p>
           </div>
 
-          <div className="flex flex-wrap items-center gap-3 shrink-0">
+          <div className="flex flex-col sm:flex-row items-stretch sm:items-center gap-3 shrink-0 w-full md:w-auto">
             <a
               href="tel:+6598989760"
-              className="inline-flex items-center gap-2 px-6 py-3 rounded-full bg-white text-[#FA551E] text-xs sm:text-sm font-bold shadow-xs hover:bg-neutral-50 transition-colors"
+              className="inline-flex items-center justify-center gap-2 px-6 py-3.5 rounded-full bg-white text-[#FA551E] text-xs sm:text-sm font-bold shadow-xs hover:bg-neutral-50 transition-colors text-center"
             >
               <Phone className="w-4 h-4 fill-[#FA551E]" />
               <span>+65 9898 9760</span>
@@ -319,7 +363,7 @@ async function BlogPostDetail({ params }: PostPageProps) {
               href="https://wa.me/6598989760"
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center gap-2 px-6 py-3 rounded-full bg-neutral-900 hover:bg-black text-white text-xs sm:text-sm font-bold shadow-xs transition-colors"
+              className="inline-flex items-center justify-center gap-2 px-6 py-3.5 rounded-full bg-neutral-900 hover:bg-black text-white text-xs sm:text-sm font-bold shadow-xs transition-colors text-center"
             >
               <MessageSquare className="w-4 h-4" />
               <span>WhatsApp</span>
