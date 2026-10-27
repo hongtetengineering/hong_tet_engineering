@@ -141,7 +141,7 @@ export function TestimonialsSection() {
           </div>
 
           <a
-            href="https://wa.me/6583145705?text=Hello%20Hong%20Tet%20Engineering,%20I%20would%20like%20to%20enquire%20about%20a%20project"
+            href="https://wa.me/6598989760?text=Hello%20Hong%20Tet%20Engineering,%20I%20would%20like%20to%20enquire%20about%20a%20project"
             target="_blank"
             rel="noopener noreferrer"
             className="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-5 py-2.5 rounded-full bg-white/10 hover:bg-white/20 text-white text-xs font-semibold transition-colors"

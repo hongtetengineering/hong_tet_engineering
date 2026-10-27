@@ -6,42 +6,42 @@ export function ServicesSection() {
       id: "01",
       title: "Metal Structure Fabrication & I-Beams",
       desc: "Complete fabrication and erection of structural steel frameworks, industrial I-beam framing, warehouse supports, and custom components tailored to Singapore project specs.",
-      image: "/services/metal-structure.jpg",
+      image: "/services/stock-image/factory-worker-working-warehouse-handling-metal-material-production.jpg",
       features: ["I-Beam Installation", "Structural Steel Framework"],
     },
     {
       id: "02",
       title: "Roofing & Shelter Solutions",
       desc: "Weatherproof industrial roofing and canopy installations built for tropical durability using zinc sheets, clay roof tiles, polycarbonate skylights, and composite panels.",
-      image: "/services/roofing-shelter.jpg",
+      image: "/services/stock-image/medium-shot-men-working-together.jpg",
       features: ["Zinc Sheet Roofing", "Polycarbonate Skylights"],
     },
     {
       id: "03",
       title: "Metal & Stainless-Steel Works",
       desc: "Precision fabrication of architectural metal fittings built for safety compliance and refined finish: stainless-steel railings, heavy-duty main gates, and industrial staircases.",
-      image: "/services/stainless-metal.jpg",
+      image: "/services/stock-image/worker-working-with-circular-grinder-metal-with-sparks.jpg",
       features: ["Stainless-Steel Railings", "Main Gates & Staircases"],
     },
     {
       id: "04",
       title: "Architectural Glass Installation",
       desc: "Modern architectural glass solutions combining spatial elegance with strict safety standards: frameless glass doors, structural windows, and tempered glass balustrades.",
-      image: "/services/glass-installation.jpg",
+      image: "/services/stock-image/carpenter-holds-drill-drills-window.jpg",
       features: ["Frameless Glass Doors", "Glass Balustrades"],
     },
     {
       id: "05",
       title: "Renovation & Protective Painting",
       desc: "End-to-end spatial alterations, interior and exterior building renovation, and protective industrial-grade painting for homes, commercial offices, and factories.",
-      image: "/services/renovation-painting.jpg",
+      image: "/services/stock-image/sideways-shot-busy-handyman-dressed-safety-uniform-holds-paint-roller-wears-protective-mask-works-hard-isolated-pink-wall-repair-renovation-concept-maintenance-worker.jpg",
       features: ["House & Landed Renovation", "Commercial Office Fit-Outs"],
     },
     {
       id: "06",
       title: "Skilled Manpower Supply",
       desc: "Certified, BCA-compliant engineering workforce including structural welders, metal fabricators, riggers, and site technicians deployed to meet site demands.",
-      image: "/services/manpower-supply.jpg",
+      image: "/services/stock-image/confident-architect-smiling.jpg",
       features: ["BCA Compliant Workforce", "Certified Welders & Riggers"],
     },
   ];
@@ -79,7 +79,7 @@ export function ServicesSection() {
           {services.map((s) => (
             <div
               key={s.id}
-              className="relative h-[350px] sm:h-[420px] rounded-[24px] overflow-hidden border border-white/10 shadow-lg bg-neutral-900 flex flex-col justify-end"
+              className="relative h-[360px] sm:h-[420px] rounded-[24px] overflow-hidden border border-white/10 shadow-lg bg-neutral-900 flex flex-col justify-between"
             >
               {/* Background Local Photo - optimized and direct for 60fps smooth scrolling */}
               <div className="absolute inset-0 w-full h-full z-0">
@@ -93,29 +93,32 @@ export function ServicesSection() {
                 />
               </div>
 
-              {/* Dark Gradient Overlay for text clarity */}
-              <div className="absolute inset-0 bg-gradient-to-t from-black via-black/80 to-transparent z-10 pointer-events-none" />
+              {/* Hard dark overlay only at the bottom for text legibility; Top is 100% clear and bright */}
+              <div className="absolute inset-x-0 bottom-0 h-[52%] sm:h-[50%] bg-gradient-to-t from-black via-black/90 to-transparent z-10 pointer-events-none" />
 
-              {/* Bottom Content Area (No top elements, no hover animations) */}
-              <div className="relative z-20 p-5 sm:p-7 flex flex-col justify-end">
-                <h3 className="text-lg sm:text-2xl font-bold text-white leading-tight">
+              {/* Top Category Badges (No dark overlay on image, pill has self-contained glass background) */}
+              <div className="relative z-20 p-4 sm:p-5 flex flex-wrap items-center gap-1.5">
+                {s.features.map((f, i) => (
+                  <span
+                    key={i}
+                    className="text-[10px] sm:text-[11px] font-medium px-2.5 sm:px-3 py-1 rounded-full bg-black/60 backdrop-blur-md text-white border border-white/20 shadow-md"
+                  >
+                    {f}
+                  </span>
+                ))}
+              </div>
+
+              {/* Bottom Content Area: Header (Strictly 1 line) & Description */}
+              <div className="relative z-20 p-5 sm:p-6 flex flex-col justify-end">
+                <h3
+                  title={s.title}
+                  className="text-base sm:text-[17px] lg:text-[16px] xl:text-[18px] font-bold text-white tracking-tight leading-snug truncate"
+                >
                   {s.title}
                 </h3>
-                <p className="mt-2 text-xs sm:text-sm text-neutral-300 leading-relaxed line-clamp-3">
+                <p className="mt-2 text-xs sm:text-sm text-neutral-300 leading-relaxed line-clamp-2 sm:line-clamp-3">
                   {s.desc}
                 </p>
-
-                {/* Feature Tags */}
-                <div className="mt-3.5 sm:mt-4 flex flex-wrap gap-1.5 pt-3 border-t border-white/10">
-                  {s.features.map((f, i) => (
-                    <span
-                      key={i}
-                      className="text-[10px] sm:text-[11px] px-2 sm:px-2.5 py-0.5 rounded-full bg-white/10 text-neutral-200 border border-white/10"
-                    >
-                      {f}
-                    </span>
-                  ))}
-                </div>
               </div>
             </div>
           ))}
@@ -126,10 +129,10 @@ export function ServicesSection() {
           <p className="text-xs sm:text-sm text-neutral-400 flex flex-col sm:flex-row items-center justify-center gap-1 sm:gap-1.5">
             <span>Ready to discuss your project?</span>
             <a
-              href="tel:+6583145705"
+              href="tel:+6598989760"
               className="text-white hover:text-[#FA551E] font-semibold underline underline-offset-4 transition-colors whitespace-nowrap"
             >
-              Call us today at +65&nbsp;8314&nbsp;5705
+              Call us today at +65&nbsp;9898&nbsp;9760
             </a>
           </p>
         </div>

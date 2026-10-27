@@ -65,6 +65,12 @@ export function Navbar() {
             Projects
           </Link>
           <Link
+            href="/blog"
+            className="hover:text-[#FA551E] transition-colors"
+          >
+            Blog
+          </Link>
+          <Link
             href="/contact"
             className="hover:text-[#FA551E] transition-colors"
           >
@@ -75,11 +81,11 @@ export function Navbar() {
         {/* CTA Button */}
         <div className="flex items-center gap-3">
           <a
-            href="tel:+6583145705"
+            href="tel:+6598989760"
             className="hidden lg:inline-flex items-center gap-1.5 text-xs font-semibold text-neutral-600 hover:text-black px-2 py-1 rounded-full transition-colors"
           >
             <Phone className="w-3.5 h-3.5 text-[#FA551E]" />
-            +65 8314 5705
+            +65 9898 9760
           </a>
           <Link
             href="/contact"
@@ -137,6 +143,13 @@ export function Navbar() {
               Projects
             </Link>
             <Link
+              href="/blog"
+              onClick={() => setMobileMenuOpen(false)}
+              className="py-1 hover:text-[#FA551E]"
+            >
+              Blog
+            </Link>
+            <Link
               href="/contact"
               onClick={() => setMobileMenuOpen(false)}
               className="py-1 hover:text-[#FA551E]"
@@ -146,11 +159,11 @@ export function Navbar() {
           </div>
           <div className="pt-3 border-t border-neutral-200 flex flex-col gap-2.5">
             <a
-              href="tel:+6583145705"
+              href="tel:+6598989760"
               className="flex items-center justify-center gap-2 text-xs font-semibold py-2.5 rounded-full border border-neutral-300 text-neutral-800"
             >
               <Phone className="w-3.5 h-3.5 text-[#FA551E]" />
-              Call +65 8314 5705
+              Call +65 9898 9760
             </a>
             <Link
               href="/contact"

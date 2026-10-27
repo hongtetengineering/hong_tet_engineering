@@ -13,10 +13,10 @@ export function Footer() {
               Email
             </span>
             <a
-              href="mailto:sultamahmud2144@gmail.com"
+              href="mailto:renumohal1995@gmail.com"
               className="text-xs sm:text-sm font-bold text-neutral-900 hover:text-[#FA551E] transition-colors break-all"
             >
-              sultamahmud2144@gmail.com
+              renumohal1995@gmail.com
             </a>
           </div>
 
@@ -25,10 +25,10 @@ export function Footer() {
               Contact
             </span>
             <a
-              href="tel:+6583145705"
+              href="tel:+6598989760"
               className="text-xs sm:text-sm font-bold text-neutral-900 hover:text-[#FA551E] transition-colors whitespace-nowrap"
             >
-              +65 8314 5705
+              +65 9898 9760
             </a>
           </div>
 
@@ -90,6 +90,12 @@ export function Footer() {
               className="hover:text-[#FA551E] transition-colors py-1"
             >
               Projects
+            </Link>
+            <Link
+              href="/blog"
+              className="hover:text-[#FA551E] transition-colors py-1"
+            >
+              Blog
             </Link>
             <Link
               href="/contact"

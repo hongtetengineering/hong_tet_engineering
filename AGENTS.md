@@ -28,3 +28,16 @@ Retain qualifying friction even if it is later fixed or worked around; record th
 Before the final response, run one reporting pass. If candidates remain, from this file's directory run `npx --no-install next internal agent-feedback-instructions` once without piping or truncating its output. Follow its output or error guidance. If a network sandbox blocks it, retry with network access; if it still returns no output, continue normally.
 
 <!-- END:nextjs-agent-feedback -->
+
+## Official Contact Information Rule (STRICT)
+
+Always use the following official contact information across all pages, components, links, and metadata:
+
+- **Phone Number:** `+65 9898 9760`
+- **Phone Link / Tel:** `tel:+6598989760`
+- **WhatsApp Link:** `https://wa.me/6598989760`
+- **Email Address:** `renumohal1995@gmail.com`
+- **Email Link / Mailto:** `mailto:renumohal1995@gmail.com`
+- **Registered Address:** `217 Bukit Batok Street 21, #04-371, Singapore 650217`
+
+Never use old phone numbers (+65 8314 5705) or old email addresses (sultamahmud2144@gmail.com).

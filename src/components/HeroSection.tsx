@@ -2,58 +2,151 @@ import Image from "next/image";
 import Link from "next/link";
 import { Check, CheckCircle2, Phone, Star } from "lucide-react";
 
-// Traffic Cone Component with exact 3D styling and blur matching the template
+// Traffic Cone Component with exact 3D styling, realistic perspective blur, and natural floating animation
 function TrafficCone({
   className,
   blur = 2,
   rotate = 0,
+  duration = 5,
+  delay = 0,
+  variant = "a",
 }: {
   className?: string;
   blur?: number;
   rotate?: number;
+  duration?: number;
+  delay?: number;
+  variant?: "a" | "b" | "c";
 }) {
+  const animName =
+    variant === "b"
+      ? "heroConeFloatB"
+      : variant === "c"
+      ? "heroConeFloatC"
+      : "heroConeFloatA";
+
   return (
-    <div
-      className={`pointer-events-none select-none ${className}`}
-      style={{
-        transform: `rotate(${rotate}deg)`,
-        filter: blur > 0 ? `blur(${blur}px)` : "none",
-      }}
-    >
-      <svg
-        viewBox="0 0 76 96"
-        fill="none"
-        xmlns="http://www.w3.org/2000/svg"
-        className="w-full h-full drop-shadow-md"
+    <div className={`pointer-events-none select-none ${className}`}>
+      <div
+        className="w-full h-full will-change-transform"
+        style={{
+          animation: `${animName} ${duration}s ease-in-out ${delay}s infinite alternate`,
+        }}
       >
-        {/* 3D Base Plate with Perspective */}
-        <path d="M6 78 L38 93 L70 80 L38 68 Z" fill="#C93800" />
-        <path d="M8 77 L38 90 L68 79 L38 70 Z" fill="#FF5E14" />
-        {/* Main Cone Body (Vibrant Orange) */}
-        <path d="M22 72 L38 12 L54 72 Z" fill="#FF5E14" />
-        {/* Lower White Reflective Band */}
-        <path d="M26 64 L50 64 L47 53 L29 53 Z" fill="#FFFFFF" />
-        {/* Upper White Reflective Band */}
-        <path d="M30 46 L46 46 L43 36 L33 36 Z" fill="#FFFFFF" />
-        {/* Top Tip */}
-        <path d="M35 12 L41 12 L42 20 L34 20 Z" fill="#FF5E14" />
-      </svg>
+        <div
+          className="w-full h-full"
+          style={{
+            transform: `rotate(${rotate}deg)`,
+            filter: blur > 0 ? `blur(${blur}px)` : "none",
+          }}
+        >
+          <svg
+            viewBox="0 0 76 96"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+            className="w-full h-full drop-shadow-md"
+          >
+            {/* 3D Base Plate with Perspective */}
+            <path d="M6 78 L38 93 L70 80 L38 68 Z" fill="#C93800" />
+            <path d="M8 77 L38 90 L68 79 L38 70 Z" fill="#FF5E14" />
+            {/* Main Cone Body (Vibrant Orange) */}
+            <path d="M22 72 L38 12 L54 72 Z" fill="#FF5E14" />
+            {/* Lower White Reflective Band */}
+            <path d="M26 64 L50 64 L47 53 L29 53 Z" fill="#FFFFFF" />
+            {/* Upper White Reflective Band */}
+            <path d="M30 46 L46 46 L43 36 L33 36 Z" fill="#FFFFFF" />
+            {/* Top Tip */}
+            <path d="M35 12 L41 12 L42 20 L34 20 Z" fill="#FF5E14" />
+          </svg>
+        </div>
+      </div>
     </div>
   );
 }
 
 export function HeroSection() {
   const photoStrip = [
-    { src: "/home/URVvm2e2n311SLbznqjwOjS6Pns.png", alt: "Structural Steel & Facade" },
-    { src: "/home/spqZSEbMAjhztlmgUStzq9snwHQ.png", alt: "Modern Interior Architecture" },
-    { src: "/home/sV0CAZAwKE1RB17JCdRjT8g7vkk.jpg", alt: "Spiral Staircase & Railing" },
-    { src: "/home/i305rk5y1kDk7MK7PHZs9qBDp4.png", alt: "Residential Renovation & Canopy" },
-    { src: "/home/ltt4YfNYzEEkxPtwrx6JtpgMls.jpg", alt: "Commercial Glass & Metal Pavilion" },
-    { src: "/home/HnhIurfILJ3NurhYjLth8tXMvM.png", alt: "Roofing & Patio Structure" },
+    {
+      src: "/services/galary/construction-works-frankfurt-downtown-germany.jpg",
+      alt: "Commercial Building & High-Rise Construction",
+    },
+    {
+      src: "/services/galary/full-shot-worker-with-helmet-working-roof.jpg",
+      alt: "Industrial Roofing & Canopy Installation",
+    },
+    {
+      src: "/services/galary/low-angle-view-scafolding-building.jpg",
+      alt: "Scaffolding & Building Facade Engineering",
+    },
+    {
+      src: "/services/galary/scene-construction-site-with-equipment.jpg",
+      alt: "Structural Steel & Site Equipment Operations",
+    },
+    {
+      src: "/services/galary/team-architects-building-site.jpg",
+      alt: "BCA Site Supervision & Engineering Inspection",
+    },
+    {
+      src: "/services/galary/two-builders-works-building-site.jpg",
+      alt: "Skilled Construction & Metal Framing Team",
+    },
+    {
+      src: "/services/galary/house-with-marble-fence.jpg",
+      alt: "Architectural Metal Fencing & Gates",
+    },
+    {
+      src: "/services/galary/businessman-discussing-blueprint-with-architects.jpg",
+      alt: "Project Blueprint Planning & Consultation",
+    },
+    {
+      src: "/services/galary/full-shot-man-mixing-construction-composition.jpg",
+      alt: "Structural Foundation & Alteration Works",
+    },
+    {
+      src: "/services/galary/young-engineer-work-clothes-yellow-hardhat-dreamily-looking-aside-holding-plan-new-apartments-hands-with-red-ladder-near-repairing-flat.jpg",
+      alt: "Commercial & Residential Interior Fit-Out",
+    },
   ];
 
   return (
     <section className="relative w-full max-w-full overflow-x-hidden">
+      {/* Dynamic Keyframes for smooth floating traffic cones */}
+      <style>{`
+        @keyframes heroConeFloatA {
+          0% {
+            transform: translate3d(0, 0, 0) rotate(0deg);
+          }
+          50% {
+            transform: translate3d(2px, -8px, 0) rotate(2deg);
+          }
+          100% {
+            transform: translate3d(-3px, -16px, 0) rotate(-2.5deg);
+          }
+        }
+        @keyframes heroConeFloatB {
+          0% {
+            transform: translate3d(0, 0, 0) rotate(0deg);
+          }
+          50% {
+            transform: translate3d(-3px, -11px, 0) rotate(-3deg);
+          }
+          100% {
+            transform: translate3d(2px, -19px, 0) rotate(2.2deg);
+          }
+        }
+        @keyframes heroConeFloatC {
+          0% {
+            transform: translate3d(0, 0, 0) rotate(0deg);
+          }
+          50% {
+            transform: translate3d(3px, -7px, 0) rotate(2.5deg);
+          }
+          100% {
+            transform: translate3d(-2px, -13px, 0) rotate(-1.5deg);
+          }
+        }
+      `}</style>
+
       {/* =========================================================================
           MAIN HERO CARD CONTAINER (Full-width blueprint background with rounded bottom)
           ========================================================================= */}
@@ -102,13 +195,16 @@ export function HeroSection() {
             WORKERS STAGE WITH FLOATING TRAFFIC CONES (Positioned safely to sides and bottom)
             ========================================================================= */}
         <div className="relative z-10 w-full max-w-[1200px] mx-auto h-[290px] sm:h-[440px] lg:h-[550px] mt-6 sm:mt-10 flex items-end justify-center overflow-hidden">
-          {/* FLOATING TRAFFIC CONES: Hidden or refined on mobile to avoid cluttering */}
+          {/* FLOATING TRAFFIC CONES: Animated with independent floating rhythms */}
           
           {/* Cone 1: Far Left (Mid-height, blurred bokeh) */}
           <TrafficCone
             className="hidden sm:block absolute left-[3%] sm:left-[6%] bottom-[42%] w-10 sm:w-14 z-5"
             blur={2.5}
             rotate={-12}
+            duration={5.2}
+            delay={0}
+            variant="a"
           />
 
           {/* Cone 2: Mid-Left Floating */}
@@ -116,6 +212,9 @@ export function HeroSection() {
             className="hidden sm:block absolute left-[18%] sm:left-[21%] bottom-[38%] w-9 sm:w-12 z-5"
             blur={1.8}
             rotate={8}
+            duration={6.0}
+            delay={0.8}
+            variant="b"
           />
 
           {/* Cone 3: Lower Left */}
@@ -123,6 +222,9 @@ export function HeroSection() {
             className="absolute left-[4%] sm:left-[12%] bottom-[12%] sm:bottom-[16%] w-7 sm:w-11 z-5"
             blur={2.5}
             rotate={-16}
+            duration={4.6}
+            delay={1.5}
+            variant="c"
           />
 
           {/* Cone 4: Bottom-Left Edge */}
@@ -130,6 +232,9 @@ export function HeroSection() {
             className="hidden sm:block absolute left-[20%] sm:left-[23%] bottom-[6%] w-10 sm:w-13 z-25"
             blur={2}
             rotate={-8}
+            duration={5.8}
+            delay={0.4}
+            variant="a"
           />
 
           {/* Cone 5: Center-Bottom (In front of supervisor waist/belt at very bottom edge) */}
@@ -137,6 +242,9 @@ export function HeroSection() {
             className="absolute left-[48%] sm:left-[49%] bottom-[1%] sm:bottom-[2%] w-8 sm:w-13 z-30"
             blur={1.4}
             rotate={-4}
+            duration={4.8}
+            delay={1.1}
+            variant="b"
           />
 
           {/* Cone 6: Right-Center Bottom */}
@@ -144,6 +252,9 @@ export function HeroSection() {
             className="hidden sm:block absolute right-[31%] sm:right-[33%] bottom-[3%] w-9 sm:w-12 z-30"
             blur={1.6}
             rotate={14}
+            duration={5.4}
+            delay={0.2}
+            variant="c"
           />
 
           {/* Cone 7: Mid-Right Floating */}
@@ -151,6 +262,9 @@ export function HeroSection() {
             className="hidden sm:block absolute right-[19%] sm:right-[22%] bottom-[38%] w-9 sm:w-12 z-5"
             blur={1.8}
             rotate={-10}
+            duration={6.2}
+            delay={1.7}
+            variant="a"
           />
 
           {/* Cone 8: Lower Right */}
@@ -158,6 +272,9 @@ export function HeroSection() {
             className="absolute right-[4%] sm:right-[12%] bottom-[12%] sm:bottom-[18%] w-7 sm:w-15 z-5"
             blur={2.5}
             rotate={15}
+            duration={4.9}
+            delay={0.6}
+            variant="b"
           />
 
           {/* Cone 9: Far Right */}
@@ -165,6 +282,9 @@ export function HeroSection() {
             className="hidden sm:block absolute right-[2%] sm:right-[5%] bottom-[42%] w-10 sm:w-14 z-5"
             blur={2.5}
             rotate={-10}
+            duration={5.7}
+            delay={1.3}
+            variant="c"
           />
 
           {/* THREE ENGINEERS */}
@@ -254,7 +374,7 @@ export function HeroSection() {
             display: flex !important;
             width: max-content !important;
             will-change: transform !important;
-            animation: photoMarqueeKeyframes 36s linear infinite !important;
+            animation: photoMarqueeKeyframes 48s linear infinite !important;
           }
           .animate-photo-marquee:hover {
             animation-play-state: paused !important;
@@ -365,11 +485,11 @@ export function HeroSection() {
             </div>
             <div className="mt-6 sm:mt-8 pt-2 sm:pt-4">
               <a
-                href="tel:+6583145705"
+                href="tel:+6598989760"
                 className="inline-flex items-center gap-2 px-6 py-3 rounded-full bg-white text-[#FA551E] text-xs sm:text-sm font-bold shadow-sm hover:bg-neutral-50 transition-colors"
               >
                 <Phone className="w-4 h-4 fill-[#FA551E]" />
-                <span>Call us: +65 8314 5705</span>
+                <span>Call us: +65 9898 9760</span>
               </a>
             </div>
           </div>

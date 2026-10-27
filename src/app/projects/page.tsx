@@ -1,17 +1,20 @@
-import { UnderDevelopment } from "@/components/UnderDevelopment";
 import type { Metadata } from "next";
+import { ProjectsClientView } from "./ProjectsClientView";
 
 export const metadata: Metadata = {
-  title: "Projects | HONG TET ENGINEERING (S) PTE. LTD.",
+  title: "Projects & Case Studies | HONG TET ENGINEERING (S) PTE. LTD.",
   description:
-    "Explore our completed engineering case studies across Singapore: Tuas Industrial, Woodlands Logistics, Bukit Batok, and Jurong East.",
+    "Explore completed structural steel, industrial roofing, stainless-steel railings, architectural glass, and renovation case studies across Singapore. Call +65 9898 9760.",
+  keywords: [
+    "Hong Tet Engineering Projects",
+    "Singapore Structural Steel Projects",
+    "Tuas Industrial Steel Erection",
+    "Roofing Case Studies Singapore",
+    "Stainless Steel Railings Singapore",
+    "Commercial Renovation Singapore",
+  ],
 };
 
 export default function ProjectsPage() {
-  return (
-    <UnderDevelopment
-      title="Featured Projects"
-      subtitle="A complete portfolio of completed structural steel erections, industrial roofing, and architectural installations across Singapore is currently being curated."
-    />
-  );
+  return <ProjectsClientView />;
 }

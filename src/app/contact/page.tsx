@@ -1,17 +1,19 @@
-import { UnderDevelopment } from "@/components/UnderDevelopment";
 import type { Metadata } from "next";
+import { ContactClientView } from "./ContactClientView";
 
 export const metadata: Metadata = {
   title: "Contact Us | HONG TET ENGINEERING (S) PTE. LTD.",
   description:
-    "Get in touch with Hong Tet Engineering Singapore. Phone: +65 8314 5705, Email: sultamahmud2144@gmail.com, Office: 217 Bukit Batok Street 21.",
+    "Contact Hong Tet Engineering (S) Pte. Ltd. Singapore. Phone: +65 9898 9760, Email: renumohal1995@gmail.com, Office: 217 Bukit Batok Street 21, Singapore 650217.",
+  keywords: [
+    "Contact Hong Tet Engineering",
+    "Engineering Contractor Bukit Batok",
+    "Singapore Metal Fabrication Quote",
+    "Roofing Contractor Contact Singapore",
+    "Structural Steel Consultation",
+  ],
 };
 
 export default function ContactPage() {
-  return (
-    <UnderDevelopment
-      title="Contact Us"
-      subtitle="A dedicated interactive consultation portal is currently in development. You can reach our Singapore desk directly via phone at +65 8314 5705 or WhatsApp."
-    />
-  );
+  return <ContactClientView />;
 }

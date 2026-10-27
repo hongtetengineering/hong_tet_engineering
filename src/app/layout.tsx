@@ -14,7 +14,7 @@ export const metadata: Metadata = {
   title:
     "HONG TET ENGINEERING (S) PTE. LTD. | Metal Fabrication & Roofing Singapore",
   description:
-    "Reliable structural steel fabrication, I-beam installation, roofing, stainless-steel railings, architectural glass, renovation and skilled manpower supply in Singapore. Call +65 8314 5705.",
+    "Reliable structural steel fabrication, I-beam installation, roofing, stainless-steel railings, architectural glass, renovation and skilled manpower supply in Singapore. Call +65 9898 9760.",
   keywords: [
     "Hong Tet Engineering",
     "Metal Fabrication Singapore",

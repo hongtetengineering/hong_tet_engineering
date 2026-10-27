@@ -124,10 +124,10 @@ export function ServiceAreaSection() {
               <span className="text-xs sm:text-sm text-neutral-600 whitespace-nowrap">
                 Prefer to talk now?{" "}
                 <a
-                  href="tel:+6583145705"
+                  href="tel:+6598989760"
                   className="font-bold text-neutral-900 hover:text-[#FA551E] transition-colors whitespace-nowrap"
                 >
-                  Call +65&nbsp;8314&nbsp;5705
+                  Call +65&nbsp;9898&nbsp;9760
                 </a>
               </span>
             </div>

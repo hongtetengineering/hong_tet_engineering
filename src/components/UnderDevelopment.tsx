@@ -46,15 +46,15 @@ export function UnderDevelopment({
           </Link>
 
           <a
-            href="tel:+6583145705"
+            href="tel:+6598989760"
             className="inline-flex items-center gap-2 px-6 sm:px-7 py-3 sm:py-3.5 rounded-full bg-white hover:bg-neutral-50 text-neutral-900 border border-neutral-300 text-xs sm:text-sm font-bold tracking-wide shadow-xs transition-colors"
           >
             <Phone className="w-4 h-4 text-[#FA551E]" />
-            <span>Call +65 8314 5705</span>
+            <span>Call +65 9898 9760</span>
           </a>
 
           <a
-            href="https://wa.me/6583145705?text=Hello%20Hong%20Tet%20Engineering,%20I%20am%20enquiring%20about%20your%20services"
+            href="https://wa.me/6598989760?text=Hello%20Hong%20Tet%20Engineering,%20I%20am%20enquiring%20about%20your%20services"
             target="_blank"
             rel="noopener noreferrer"
             className="inline-flex items-center gap-2 px-6 sm:px-7 py-3 sm:py-3.5 rounded-full bg-emerald-600 hover:bg-emerald-500 text-white text-xs sm:text-sm font-bold tracking-wide shadow-xs transition-colors"
@@ -75,10 +75,10 @@ export function UnderDevelopment({
                 Direct Line
               </span>
               <a
-                href="tel:+6583145705"
+                href="tel:+6598989760"
                 className="text-xs sm:text-sm font-bold text-neutral-900 hover:text-[#FA551E] transition-colors"
               >
-                +65 8314 5705
+                +65 9898 9760
               </a>
             </div>
           </div>
@@ -92,10 +92,10 @@ export function UnderDevelopment({
                 Email
               </span>
               <a
-                href="mailto:sultamahmud2144@gmail.com"
+                href="mailto:renumohal1995@gmail.com"
                 className="text-xs sm:text-sm font-bold text-neutral-900 hover:text-[#FA551E] transition-colors truncate block"
               >
-                sultamahmud2144@gmail.com
+                renumohal1995@gmail.com
               </a>
             </div>
           </div>

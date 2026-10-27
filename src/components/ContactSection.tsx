@@ -22,7 +22,7 @@ export function ContactSection() {
 
   const openWhatsApp = () => {
     const text = `*New Project Enquiry - Hong Tet Engineering*%0A%0A*Name:* ${formData.name}%0A*Phone:* ${formData.phone}%0A*Email:* ${formData.email}%0A*Service:* ${formData.service || "General"}%0A*Budget:* ${formData.budget || "TBD"}%0A*Details:* ${encodeURIComponent(formData.message || "Consultation requested")}`;
-    window.open(`https://wa.me/6583145705?text=${text}`, "_blank");
+    window.open(`https://wa.me/6598989760?text=${text}`, "_blank");
   };
 
   return (
@@ -97,11 +97,11 @@ export function ContactSection() {
                     <span>Send via WhatsApp</span>
                   </button>
                   <a
-                    href="tel:+6583145705"
+                    href="tel:+6598989760"
                     className="inline-flex items-center gap-2 px-6 py-3 rounded-full bg-white/10 hover:bg-white/20 text-white text-xs font-bold uppercase tracking-wider transition-colors whitespace-nowrap"
                   >
                     <Phone className="w-4 h-4 text-[#FA551E]" />
-                    <span>Call +65&nbsp;8314&nbsp;5705</span>
+                    <span>Call +65&nbsp;9898&nbsp;9760</span>
                   </a>
                 </div>
 
