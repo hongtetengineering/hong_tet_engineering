@@ -39,21 +39,20 @@ Built with **Next.js 16 (App Router)** and **React 19**, the application combine
 
 ## 🏗️ Core Services & Solutions
 
-| #      | Service Category                          | Description & Capabilities                                                                                                                                                                 |
-| ------ | ----------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| # | Service Category | Description & Capabilities |
+|---|---|---|
 | **01** | **Metal Structure Fabrication & I-Beams** | Complete fabrication and erection of structural steel frameworks, industrial I-beam framing, warehouse mezzanine platforms, and custom heavy-load components built to Singapore standards. |
-| **02** | **Roofing & Shelter Solutions**           | Weatherproof industrial roofing and canopy installations built for tropical durability using zinc sheets, clay roof tiles, polycarbonate skylights, and composite insulated panels.        |
-| **03** | **Metal & Stainless-Steel Works**         | Precision fabrication of architectural metal fittings: 304/316 grade stainless-steel railings, ADA-compliant handrails, heavy-duty driveway main gates, and spiral/industrial staircases.  |
-| **04** | **Architectural Glass Installation**      | Spatial elegance combined with BCA structural safety: frameless tempered glass doors, storefronts, structural acoustic windows, and laminated glass balustrades.                           |
-| **05** | **Renovation & Protective Painting**      | End-to-end spatial alterations, interior and exterior building additions & alterations (A&A), anti-corrosion protective coatings, and commercial office fit-outs.                          |
-| **06** | **Skilled Manpower Supply**               | Certified, BCA-compliant engineering workforce including structural welders (3G/4G/6G), metal fitters, riggers, and site supervisors deployed for Singapore projects.                      |
+| **02** | **Roofing & Shelter Solutions** | Weatherproof industrial roofing and canopy installations built for tropical durability using zinc sheets, clay roof tiles, polycarbonate skylights, and composite insulated panels. |
+| **03** | **Metal & Stainless-Steel Works** | Precision fabrication of architectural metal fittings: 304/316 grade stainless-steel railings, ADA-compliant handrails, heavy-duty driveway main gates, and spiral/industrial staircases. |
+| **04** | **Architectural Glass Installation** | Spatial elegance combined with BCA structural safety: frameless tempered glass doors, storefronts, structural acoustic windows, and laminated glass balustrades. |
+| **05** | **Renovation & Protective Painting** | End-to-end spatial alterations, interior and exterior building additions & alterations (A&A), anti-corrosion protective coatings, and commercial office fit-outs. |
+| **06** | **Skilled Manpower Supply** | Certified, BCA-compliant engineering workforce including structural welders (3G/4G/6G), metal fitters, riggers, and site supervisors deployed for Singapore projects. |
 
 ---
 
 ## ⚡ Tech Stack & Architecture
 
 ### Frontend Core
-
 - **Framework:** [Next.js 16.4.3](https://nextjs.org/) (App Router, Server & Client Components)
 - **Library:** [React 19.3.0](https://react.dev/) with [React Compiler](https://react.dev/learn/react-compiler) (`babel-plugin-react-compiler`)
 - **Language:** [TypeScript 5](https://www.typescriptlang.org/) for strict type safety
@@ -61,13 +60,11 @@ Built with **Next.js 16 (App Router)** and **React 19**, the application combine
 - **Component Primitives:** `@base-ui/react`, `shadcn/ui`, `class-variance-authority` (cva), `clsx`, `tailwind-merge`
 
 ### Animations & UX
-
 - **Smooth Scrolling:** [Lenis](https://lenis.darkroom.engineering/) (`lenis@1.3.27`) with momentum-based scroll smoothing
 - **Motion & Interactions:** [Framer Motion](https://www.framer.com/motion/) (`v14.6.0`) & [GSAP](https://greensock.com/gsap/) (`v3.15.0`)
 - **Icons:** [Lucide React](https://lucide.dev/) (`lucide-react@1.61.0`)
 
 ### Content & CMS
-
 - **Engine:** [next-mdx-remote](https://github.com/hashicorp/next-mdx-remote) (`v6.0.0`) & [gray-matter](https://github.com/jonschlinkert/gray-matter) (`v4.0.3`)
 - **Typography:** Google Fonts (`Roboto` via `next/font/google`)
 
@@ -127,15 +124,15 @@ hong_tet_engineering/
 
 ## 🚀 Pages & Routes
 
-| Route          | Page                 | Purpose & Key Features                                                                                                           |
-| -------------- | -------------------- | -------------------------------------------------------------------------------------------------------------------------------- |
-| `/`            | **Home**             | Comprehensive brand presentation: Hero, Services, Process, Projects showcase, Reviews, Islandwide coverage, FAQ & Contact.       |
-| `/about`       | **About Us**         | Corporate background, safety compliance standards (BCA/WSH), values, milestone timeline, and core leadership.                    |
-| `/services`    | **Services**         | Deep-dive into structural steel, roofing, architectural railings, glass installations, and manpower supply with technical specs. |
-| `/projects`    | **Projects**         | Filterable portfolio of completed Singapore contracts with categories (Industrial, Commercial, Residential).                     |
-| `/blog`        | **Engineering Blog** | Searchable technical articles on BCA standards, welding methods, roofing care, and engineering insights.                         |
-| `/blog/[slug]` | **Article Detail**   | Full MDX rendered technical guides with reading time, author info, styled typography, and related callouts.                      |
-| `/contact`     | **Contact**          | Direct telephone and email links, interactive inquiry form, office location, and instant WhatsApp chat.                          |
+| Route | Page | Purpose & Key Features |
+|---|---|---|
+| `/` | **Home** | Comprehensive brand presentation: Hero, Services, Process, Projects showcase, Reviews, Islandwide coverage, FAQ & Contact. |
+| `/about` | **About Us** | Corporate background, safety compliance standards (BCA/WSH), values, milestone timeline, and core leadership. |
+| `/services` | **Services** | Deep-dive into structural steel, roofing, architectural railings, glass installations, and manpower supply with technical specs. |
+| `/projects` | **Projects** | Filterable portfolio of completed Singapore contracts with categories (Industrial, Commercial, Residential). |
+| `/blog` | **Engineering Blog** | Searchable technical articles on BCA standards, welding methods, roofing care, and engineering insights. |
+| `/blog/[slug]` | **Article Detail** | Full MDX rendered technical guides with reading time, author info, styled typography, and related callouts. |
+| `/contact` | **Contact** | Direct telephone and email links, interactive inquiry form, office location, and instant WhatsApp chat. |
 
 ---
 
@@ -143,14 +140,14 @@ hong_tet_engineering/
 
 The website adheres to an industrial, precision-engineered design language:
 
-| Design Token        | Value / Preview                             | Usage                                                    |
-| ------------------- | ------------------------------------------- | -------------------------------------------------------- |
-| **Primary Accent**  | `#FA551E` (Safety Orange)                   | Primary CTAs, active links, badges, hover accents        |
-| **Dark Base**       | `#1A1A1A` / `#222222` (Industrial Charcoal) | Main headings, cards, dark section backgrounds           |
-| **Light Canvas**    | `#FBF9F5` (Warm Cream White)                | Page primary background, clean reading contrast          |
-| **Surface Cream**   | `#F4F2EB` (Muted Sand)                      | Footer, secondary cards, border contrast                 |
-| **Typography**      | `Roboto` (100–900 variable weights)         | Crisp, modern technical readability across all devices   |
-| **Borders & Rules** | `#E5E2D9` / `#E5E7EB`                       | Subtle structural division lines echoing blueprint grids |
+| Design Token | Value / Preview | Usage |
+|---|---|---|
+| **Primary Accent** | `#FA551E` (Safety Orange) | Primary CTAs, active links, badges, hover accents |
+| **Dark Base** | `#1A1A1A` / `#222222` (Industrial Charcoal) | Main headings, cards, dark section backgrounds |
+| **Light Canvas** | `#FBF9F5` (Warm Cream White) | Page primary background, clean reading contrast |
+| **Surface Cream** | `#F4F2EB` (Muted Sand) | Footer, secondary cards, border contrast |
+| **Typography** | `Roboto` (100–900 variable weights) | Crisp, modern technical readability across all devices |
+| **Borders & Rules** | `#E5E2D9` / `#E5E7EB` | Subtle structural division lines echoing blueprint grids |
 
 ---
 
@@ -170,7 +167,6 @@ featured: true
 ---
 
 ## Technical Specifications
-
 Every installation complies with Singapore Building and Construction Authority (BCA) specifications...
 ```
 
@@ -185,7 +181,6 @@ Every installation complies with Singapore Building and Construction Authority (
 ### Prerequisites
 
 Ensure you have installed:
-
 - [Node.js](https://nodejs.org/) `>= 20.0.0`
 - [pnpm](https://pnpm.io/) `>= 10.0.0`
 
@@ -231,7 +226,6 @@ pnpm run pages:deploy
 ```
 
 #### Cloudflare Pages Dashboard Settings:
-
 - **Framework preset:** `Next.js (Static HTML Export)`
 - **Build command:** `pnpm build`
 - **Build output directory:** `out`
@@ -257,6 +251,6 @@ For structural steel fabrication, industrial roofing quotes, architectural metal
 <div align="center">
 
 © 2026 **HONG TET ENGINEERING (S) PTE. LTD.** All rights reserved.  
-_Precision Engineering. Uncompromising Quality. Built to Last._
+*Precision Engineering. Uncompromising Quality. Built to Last.*
 
 </div>
