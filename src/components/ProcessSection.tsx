@@ -10,36 +10,36 @@ export function ProcessSection() {
       num: "01",
       title: "Consultation",
       desc: "We listen, understand your goals, and assess your project needs.",
-      img: "/home/7H4waNan9MZkDfcZqSBXMqTCTY.png",
+      img: "/home/7H4waNan9MZkDfcZqSBXMqTCTY.webp",
       alt: "Consultation",
     },
     {
       num: "02",
       title: "Planning & Estimate",
       desc: "We create a detailed plan and transparent estimate with no surprises.",
-      img: "/home/GKLn3u4gkhyDTonuQzGpMP0QAY.png",
+      img: "/home/GKLn3u4gkhyDTonuQzGpMP0QAY.webp",
       alt: "Planning & Estimate",
     },
     {
       num: "03",
       title: "Build & Manage",
       desc: "Our team builds with care while we manage every detail, safety standard, and keep you updated regularly.",
-      img: "/home/qTMfqkRthxWjRBqqP0A3mC1IXg.png",
+      img: "/home/qTMfqkRthxWjRBqqP0A3mC1IXg.webp",
       alt: "Build & Manage",
     },
     {
       num: "04",
       title: "Final Walkthrough",
       desc: "We review every joint, fitting, and handover item together to ensure your complete satisfaction.",
-      img: "/home/2A7SI6YLmu8H4KjoW07R9xn1FH8.png",
+      img: "/home/2A7SI6YLmu8H4KjoW07R9xn1FH8.webp",
       alt: "Final Walkthrough",
     },
   ];
 
   const avatars = [
-    "/home/jz0nn6blo9C1kYs0h5uBwk5w2o.png",
-    "/home/3132u5ED3B8BTeHA7jhd3hof50.png",
-    "/home/OvpeqVpfNycOZM27sbpVcHPQB40.png",
+    "/home/jz0nn6blo9C1kYs0h5uBwk5w2o.webp",
+    "/home/3132u5ED3B8BTeHA7jhd3hof50.webp",
+    "/home/OvpeqVpfNycOZM27sbpVcHPQB40.webp",
   ];
 
   return (

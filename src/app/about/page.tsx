@@ -164,7 +164,7 @@ export default function AboutPage() {
             {/* Architectural Blueprint Background Image */}
             <div className="absolute inset-0 w-full h-full pointer-events-none select-none z-0">
               <Image
-                src="/home/105zO15MKPqahxW0hkKzQ2UbeU.png"
+                src="/home/105zO15MKPqahxW0hkKzQ2UbeU.webp"
                 alt="Architectural Blueprint Drawing"
                 fill
                 priority
@@ -286,7 +286,7 @@ export default function AboutPage() {
             {/* Right Photo Card */}
             <div className="md:col-span-5 relative rounded-3xl overflow-hidden min-h-[300px] sm:min-h-[380px] shadow-sm border border-black/5">
               <Image
-                src="/services/galary/team-architects-building-site.jpg"
+                src="/services/galary/team-architects-building-site.webp"
                 alt="Hong Tet Engineering team reviewing project specifications"
                 fill
                 loading="lazy"

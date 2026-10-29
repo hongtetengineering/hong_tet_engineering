@@ -59,7 +59,7 @@ export default function ServicesPage() {
       shortDesc:
         "Complete fabrication and erection of structural steel frameworks, industrial I-beam framing, warehouse supports, and custom components.",
       image:
-        "/services/stock-image/factory-worker-working-warehouse-handling-metal-material-production.jpg",
+        "/services/stock-image/factory-worker-working-warehouse-handling-metal-material-production.webp",
       features: ["I-Beam Installation", "Structural Steel Framework"],
       scope: [
         "Heavy structural steel I-beam cutting, drilling, and welding",
@@ -79,7 +79,7 @@ export default function ServicesPage() {
       title: "Roofing & Shelter Solutions",
       shortDesc:
         "Weatherproof industrial roofing and canopy installations built for tropical durability using zinc sheets, tiles, and polycarbonate panels.",
-      image: "/services/stock-image/medium-shot-men-working-together.jpg",
+      image: "/services/stock-image/medium-shot-men-working-together.webp",
       features: ["Zinc Sheet Roofing", "Polycarbonate Skylights"],
       scope: [
         "Industrial zinc sheet roofing installation and re-roofing",
@@ -100,7 +100,7 @@ export default function ServicesPage() {
       shortDesc:
         "Precision fabrication of architectural metal fittings built for durability and refined finish: railings, main gates, and industrial staircases.",
       image:
-        "/services/stock-image/worker-working-with-circular-grinder-metal-with-sparks.jpg",
+        "/services/stock-image/worker-working-with-circular-grinder-metal-with-sparks.webp",
       features: ["Stainless-Steel Railings", "Main Gates & Staircases"],
       scope: [
         "Grade 304 and marine-grade 316 stainless-steel railings",
@@ -120,7 +120,7 @@ export default function ServicesPage() {
       title: "Architectural Glass Installation",
       shortDesc:
         "Modern architectural glass solutions combining spatial elegance with strict safety standards: frameless doors, windows, and balustrades.",
-      image: "/services/stock-image/carpenter-holds-drill-drills-window.jpg",
+      image: "/services/stock-image/carpenter-holds-drill-drills-window.webp",
       features: ["Frameless Glass Doors", "Glass Balustrades"],
       scope: [
         "Tempered frameless glass swing doors and sliding entrance portals",
@@ -141,7 +141,7 @@ export default function ServicesPage() {
       shortDesc:
         "End-to-end spatial alterations, interior and exterior building renovation, and protective industrial-grade painting for homes and offices.",
       image:
-        "/services/stock-image/sideways-shot-busy-handyman-dressed-safety-uniform-holds-paint-roller-wears-protective-mask-works-hard-isolated-pink-wall-repair-renovation-concept-maintenance-worker.jpg",
+        "/services/stock-image/sideways-shot-busy-handyman-dressed-safety-uniform-holds-paint-roller-wears-protective-mask-works-hard-isolated-pink-wall-repair-renovation-concept-maintenance-worker.webp",
       features: ["House & Landed Renovation", "Commercial Office Fit-Outs"],
       scope: [
         "Residential alterations, kitchen additions, and car porch revamps",
@@ -161,7 +161,7 @@ export default function ServicesPage() {
       title: "Skilled Manpower Supply",
       shortDesc:
         "Certified, BCA-compliant engineering workforce including structural welders, metal fabricators, riggers, and site technicians deployed on demand.",
-      image: "/services/stock-image/confident-architect-smiling.jpg",
+      image: "/services/stock-image/confident-architect-smiling.webp",
       features: ["BCA Compliant Workforce", "Certified Welders & Riggers"],
       scope: [
         "Certified 3G, 4G, and 6G structural welders for site erection",
@@ -242,7 +242,7 @@ export default function ServicesPage() {
             {/* Architectural Blueprint Background Image */}
             <div className="absolute inset-0 w-full h-full pointer-events-none select-none z-0">
               <Image
-                src="/home/105zO15MKPqahxW0hkKzQ2UbeU.png"
+                src="/home/105zO15MKPqahxW0hkKzQ2UbeU.webp"
                 alt="Architectural Blueprint Drawing"
                 fill
                 priority

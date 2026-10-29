@@ -31,7 +31,7 @@ export function ServiceAreaSection() {
           <div className="relative rounded-3xl overflow-hidden border border-neutral-200/80 shadow-sm bg-[#EBE7DF] min-h-[340px] sm:min-h-[480px] lg:min-h-[540px]">
             {/* Map Background Image */}
             <Image
-              src="/home/bTKcWRZFnXXRl0SfE0GiqJWx90Q.png"
+              src="/home/bTKcWRZFnXXRl0SfE0GiqJWx90Q.webp"
               alt="Hong Tet Engineering Service Area Map Singapore"
               fill
               loading="lazy"

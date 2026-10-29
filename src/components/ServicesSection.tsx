@@ -9,7 +9,7 @@ export function ServicesSection() {
       anchor: "metal-structures",
       title: "Metal Structure Fabrication & I-Beams",
       desc: "Complete fabrication and erection of structural steel frameworks, industrial I-beam framing, warehouse supports, and custom components tailored to Singapore project specs.",
-      image: "/services/stock-image/factory-worker-working-warehouse-handling-metal-material-production.jpg",
+      image: "/services/stock-image/factory-worker-working-warehouse-handling-metal-material-production.webp",
       features: ["I-Beam Installation", "Structural Steel Framework"],
     },
     {
@@ -17,7 +17,7 @@ export function ServicesSection() {
       anchor: "roofing-shelters",
       title: "Roofing & Shelter Solutions",
       desc: "Weatherproof industrial roofing and canopy installations built for tropical durability using zinc sheets, clay roof tiles, polycarbonate skylights, and composite panels.",
-      image: "/services/stock-image/medium-shot-men-working-together.jpg",
+      image: "/services/stock-image/medium-shot-men-working-together.webp",
       features: ["Zinc Sheet Roofing", "Polycarbonate Skylights"],
     },
     {
@@ -25,7 +25,7 @@ export function ServicesSection() {
       anchor: "metal-stainless",
       title: "Metal & Stainless-Steel Works",
       desc: "Precision fabrication of architectural metal fittings built for safety compliance and refined finish: stainless-steel railings, heavy-duty main gates, and industrial staircases.",
-      image: "/services/stock-image/worker-working-with-circular-grinder-metal-with-sparks.jpg",
+      image: "/services/stock-image/worker-working-with-circular-grinder-metal-with-sparks.webp",
       features: ["Stainless-Steel Railings", "Main Gates & Staircases"],
     },
     {
@@ -33,7 +33,7 @@ export function ServicesSection() {
       anchor: "architectural-glass",
       title: "Architectural Glass Installation",
       desc: "Modern architectural glass solutions combining spatial elegance with strict safety standards: frameless glass doors, structural windows, and tempered glass balustrades.",
-      image: "/services/stock-image/carpenter-holds-drill-drills-window.jpg",
+      image: "/services/stock-image/carpenter-holds-drill-drills-window.webp",
       features: ["Frameless Glass Doors", "Glass Balustrades"],
     },
     {
@@ -41,7 +41,7 @@ export function ServicesSection() {
       anchor: "renovation-painting",
       title: "Renovation & Protective Painting",
       desc: "End-to-end spatial alterations, interior and exterior building renovation, and protective industrial-grade painting for homes, commercial offices, and factories.",
-      image: "/services/stock-image/sideways-shot-busy-handyman-dressed-safety-uniform-holds-paint-roller-wears-protective-mask-works-hard-isolated-pink-wall-repair-renovation-concept-maintenance-worker.jpg",
+      image: "/services/stock-image/sideways-shot-busy-handyman-dressed-safety-uniform-holds-paint-roller-wears-protective-mask-works-hard-isolated-pink-wall-repair-renovation-concept-maintenance-worker.webp",
       features: ["House & Landed Renovation", "Commercial Office Fit-Outs"],
     },
     {
@@ -49,7 +49,7 @@ export function ServicesSection() {
       anchor: "manpower-supply",
       title: "Skilled Manpower Supply",
       desc: "Certified, BCA-compliant engineering workforce including structural welders, metal fabricators, riggers, and site technicians deployed to meet site demands.",
-      image: "/services/stock-image/confident-architect-smiling.jpg",
+      image: "/services/stock-image/confident-architect-smiling.webp",
       features: ["BCA Compliant Workforce", "Certified Welders & Riggers"],
     },
   ];

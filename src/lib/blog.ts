@@ -58,7 +58,7 @@ export function getAllPosts(): BlogPostMeta[] {
         category: data.category || "Engineering",
         author: data.author || "Hong Tet Engineering",
         readTime: data.readTime || calculateReadingTime(content),
-        image: data.image || "/Projects/Structural Steel Framing & I-Beams.jpg",
+        image: data.image || "/Projects/Structural Steel Framing & I-Beams.webp",
         featured: Boolean(data.featured),
       };
     });
@@ -93,7 +93,7 @@ export function getPostBySlug(slug: string): BlogPost | null {
     category: data.category || "Engineering",
     author: data.author || "Hong Tet Engineering",
     readTime: data.readTime || calculateReadingTime(content),
-    image: data.image || "/Projects/Structural Steel Framing & I-Beams.jpg",
+    image: data.image || "/Projects/Structural Steel Framing & I-Beams.webp",
     featured: Boolean(data.featured),
     content,
   };

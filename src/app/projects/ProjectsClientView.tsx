@@ -51,7 +51,7 @@ export function ProjectsClientView() {
       categoryKey: "metal",
       location: "Tuas Industrial, Singapore",
       date: "Jul 2024 – Sep 2024",
-      image: "/Projects/Structural Steel Framing & I-Beams.jpg",
+      image: "/Projects/Structural Steel Framing & I-Beams.webp",
       desc: "Complete workshop cutting, universal I-beam erection, and heavy warehouse framing delivered under strict BCA compliance.",
       highlights: ["Universal I-Beams", "Grade 50 High-Tensile Steel", "BCA Code Compliant"],
     },
@@ -62,7 +62,7 @@ export function ProjectsClientView() {
       categoryKey: "roofing",
       location: "Woodlands Logistics, Singapore",
       date: "May 2024 – Aug 2024",
-      image: "/Projects/Industrial Canopy & Zinc Roofing.jpg",
+      image: "/Projects/Industrial Canopy & Zinc Roofing.webp",
       desc: "Weatherproof industrial roofing and canopy installation using corrugated zinc sheets, purlin framing, and skylights.",
       highlights: ["Corrugated Zinc Roofing", "UV Polycarbonate Skylights", "Galvanized Purlins"],
     },
@@ -73,7 +73,7 @@ export function ProjectsClientView() {
       categoryKey: "railings",
       location: "Bukit Batok, Singapore",
       date: "Mar 2024 – Jun 2024",
-      image: "/Projects/Stainless Steel Railings & Heavy Gate.jpg",
+      image: "/Projects/Stainless Steel Railings & Heavy Gate.webp",
       desc: "Precision fabrication and installation of Grade 316 stainless-steel railings, heavy-duty industrial gates, and safety barriers.",
       highlights: ["Grade 316 Stainless Steel", "Sliding Main Gate", "Safety Barrier Railings"],
     },
@@ -84,7 +84,7 @@ export function ProjectsClientView() {
       categoryKey: "glass",
       location: "Jurong East, Singapore",
       date: "Jan 2024 – Apr 2024",
-      image: "/Projects/Architectural Glass Windows & Facade.jpg",
+      image: "/Projects/Architectural Glass Windows & Facade.webp",
       desc: "Commercial building glass facade, frameless tempered glass entrance portals, and acoustic meeting room partitions.",
       highlights: ["Tempered Safety Glass", "Frameless Glazing", "Acoustic Partitioning"],
     },
@@ -95,7 +95,7 @@ export function ProjectsClientView() {
       categoryKey: "metal",
       location: "Changi Aviation, Singapore",
       date: "Nov 2023 – Feb 2024",
-      image: "/services/galary/low-angle-view-scafolding-building.jpg",
+      image: "/services/galary/low-angle-view-scafolding-building.webp",
       desc: "Erection of high-level structural framework, building facade supports, and certified scaffolding access systems.",
       highlights: ["Structural Steel Framing", "Heavy Site Operations", "Certified Rigging Crew"],
     },
@@ -106,7 +106,7 @@ export function ProjectsClientView() {
       categoryKey: "roofing",
       location: "Pioneer Industrial, Singapore",
       date: "Oct 2023 – Dec 2023",
-      image: "/services/galary/full-shot-worker-with-helmet-working-roof.jpg",
+      image: "/services/galary/full-shot-worker-with-helmet-working-roof.webp",
       desc: "Full roof replacement, leak-proof waterproofing underlayment, and tropical canopy overhangs for logistics facilities.",
       highlights: ["Tropical Weatherproofing", "Safety Harness Protocols", "Purlin Erection"],
     },
@@ -117,7 +117,7 @@ export function ProjectsClientView() {
       categoryKey: "railings",
       location: "Bukit Timah Landed, Singapore",
       date: "Aug 2023 – Nov 2023",
-      image: "/services/galary/house-with-marble-fence.jpg",
+      image: "/services/galary/house-with-marble-fence.webp",
       desc: "Custom architectural boundary metal fencing, pedestrian swing gates, and anti-corrosive powder-coated finishes.",
       highlights: ["Architectural Metal Fencing", "Custom Gate Fabrication", "Anti-Corrosion Finish"],
     },
@@ -129,7 +129,7 @@ export function ProjectsClientView() {
       location: "Ang Mo Kio, Singapore",
       date: "Jun 2023 – Sep 2023",
       image:
-        "/services/galary/young-engineer-work-clothes-yellow-hardhat-dreamily-looking-aside-holding-plan-new-apartments-hands-with-red-ladder-near-repairing-flat.jpg",
+        "/services/galary/young-engineer-work-clothes-yellow-hardhat-dreamily-looking-aside-holding-plan-new-apartments-hands-with-red-ladder-near-repairing-flat.webp",
       desc: "Interior spatial alteration, drywall partitioning, fire-rated ceiling integration, and protective interior painting.",
       highlights: ["Commercial Fit-Out", "Fire-Rated Drywalls", "Protective Painting"],
     },
@@ -157,7 +157,7 @@ export function ProjectsClientView() {
             {/* Architectural Blueprint Background Image */}
             <div className="absolute inset-0 w-full h-full pointer-events-none select-none z-0">
               <Image
-                src="/home/105zO15MKPqahxW0hkKzQ2UbeU.png"
+                src="/home/105zO15MKPqahxW0hkKzQ2UbeU.webp"
                 alt="Architectural Blueprint Drawing"
                 fill
                 priority

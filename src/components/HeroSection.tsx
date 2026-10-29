@@ -67,43 +67,43 @@ function TrafficCone({
 export function HeroSection() {
   const photoStrip = [
     {
-      src: "/services/galary/construction-works-frankfurt-downtown-germany.jpg",
+      src: "/services/galary/construction-works-frankfurt-downtown-germany.webp",
       alt: "Commercial Building & High-Rise Construction",
     },
     {
-      src: "/services/galary/full-shot-worker-with-helmet-working-roof.jpg",
+      src: "/services/galary/full-shot-worker-with-helmet-working-roof.webp",
       alt: "Industrial Roofing & Canopy Installation",
     },
     {
-      src: "/services/galary/low-angle-view-scafolding-building.jpg",
+      src: "/services/galary/low-angle-view-scafolding-building.webp",
       alt: "Scaffolding & Building Facade Engineering",
     },
     {
-      src: "/services/galary/scene-construction-site-with-equipment.jpg",
+      src: "/services/galary/scene-construction-site-with-equipment.webp",
       alt: "Structural Steel & Site Equipment Operations",
     },
     {
-      src: "/services/galary/team-architects-building-site.jpg",
+      src: "/services/galary/team-architects-building-site.webp",
       alt: "BCA Site Supervision & Engineering Inspection",
     },
     {
-      src: "/services/galary/two-builders-works-building-site.jpg",
+      src: "/services/galary/two-builders-works-building-site.webp",
       alt: "Skilled Construction & Metal Framing Team",
     },
     {
-      src: "/services/galary/house-with-marble-fence.jpg",
+      src: "/services/galary/house-with-marble-fence.webp",
       alt: "Architectural Metal Fencing & Gates",
     },
     {
-      src: "/services/galary/businessman-discussing-blueprint-with-architects.jpg",
+      src: "/services/galary/businessman-discussing-blueprint-with-architects.webp",
       alt: "Project Blueprint Planning & Consultation",
     },
     {
-      src: "/services/galary/full-shot-man-mixing-construction-composition.jpg",
+      src: "/services/galary/full-shot-man-mixing-construction-composition.webp",
       alt: "Structural Foundation & Alteration Works",
     },
     {
-      src: "/services/galary/young-engineer-work-clothes-yellow-hardhat-dreamily-looking-aside-holding-plan-new-apartments-hands-with-red-ladder-near-repairing-flat.jpg",
+      src: "/services/galary/young-engineer-work-clothes-yellow-hardhat-dreamily-looking-aside-holding-plan-new-apartments-hands-with-red-ladder-near-repairing-flat.webp",
       alt: "Commercial & Residential Interior Fit-Out",
     },
   ];
@@ -154,7 +154,7 @@ export function HeroSection() {
         {/* FULL SCREEN BACKGROUND IMAGE: Architectural Blueprint Drawing */}
         <div className="absolute inset-0 w-full h-full pointer-events-none select-none z-0">
           <Image
-            src="/home/105zO15MKPqahxW0hkKzQ2UbeU.png"
+            src="/home/105zO15MKPqahxW0hkKzQ2UbeU.webp"
             alt="Architectural Blueprint Drawing"
             fill
             priority
@@ -293,7 +293,7 @@ export function HeroSection() {
             {/* Left Worker: Arms crossed, grayscale */}
             <div className="relative -mr-7 sm:-mr-20 lg:-mr-24 w-[125px] sm:w-[260px] lg:w-[380px] h-[78%] sm:h-[82%] z-10">
               <Image
-                src="/home/IZI1AFMAoGRXgu1yYBk8Ipzrg.png"
+                src="/home/IZI1AFMAoGRXgu1yYBk8Ipzrg.webp"
                 alt="Construction Engineer Left"
                 fill
                 priority
@@ -304,7 +304,7 @@ export function HeroSection() {
             {/* Center Lead Supervisor: Full vibrant color, orange hardhat & vest, blueprint tube */}
             <div className="relative z-20 w-[170px] sm:w-[320px] lg:w-[440px] h-[92%] sm:h-[98%] lg:h-full">
               <Image
-                src="/home/US4fi1Xrh46xcHTcHtdAtBJBqUM.png"
+                src="/home/US4fi1Xrh46xcHTcHtdAtBJBqUM.webp"
                 alt="Lead Construction Supervisor Center"
                 fill
                 priority
@@ -315,7 +315,7 @@ export function HeroSection() {
             {/* Right Worker: Looking at phone, grayscale */}
             <div className="relative -ml-7 sm:-ml-20 lg:-ml-24 w-[120px] sm:w-[250px] lg:w-[370px] h-[78%] sm:h-[82%] z-10">
               <Image
-                src="/home/Y1DFRVyNJj1u4gn1PVhbXl8T1hA.png"
+                src="/home/Y1DFRVyNJj1u4gn1PVhbXl8T1hA.webp"
                 alt="Site Planning Engineer Right"
                 fill
                 priority
@@ -495,10 +495,10 @@ export function HeroSection() {
             </div>
           </div>
 
-          {/* Card 2: Photo Card (5D8SUEMZgCswNmfA3kbAygA8L0.png) */}
+          {/* Card 2: Photo Card (5D8SUEMZgCswNmfA3kbAygA8L0.webp) */}
           <div className="md:col-span-4 relative rounded-3xl overflow-hidden min-h-[240px] sm:min-h-[320px] shadow-sm border border-black/5">
             <Image
-              src="/home/5D8SUEMZgCswNmfA3kbAygA8L0.png"
+              src="/home/5D8SUEMZgCswNmfA3kbAygA8L0.webp"
               alt="Two contractors reviewing blueprints"
               fill
               loading="lazy"

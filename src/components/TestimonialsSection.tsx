@@ -8,28 +8,28 @@ export function TestimonialsSection() {
       text: "Solid planning, reliable communication, and solid fabrication execution from start to finish. They kept us stay on budget, avoid delays, and feel confident at every phase.",
       name: "Daniel Brooks",
       role: "@danielb • Facility Operations",
-      img: "/home/2HldSo2Q3ueIP2cT2Piow24GVU.jpg",
+      img: "/home/2HldSo2Q3ueIP2cT2Piow24GVU.webp",
     },
     {
       stars: 5,
       text: "Our industrial warehouse roofing was completed on time with great attention to detail and a clean, watertight result. Singapore site coordination was seamless.",
       name: "Sophia Reed",
       role: "@sophiareed • Project Director",
-      img: "/home/LbTExLfAETmGD6yFKnZb9bKJrFU.jpg",
+      img: "/home/LbTExLfAETmGD6yFKnZb9bKJrFU.webp",
     },
     {
       stars: 5,
       text: "They turned our rough structural I-beam idea into a sturdy, finished space the whole operations team relies on every single day.",
       name: "Jake Mitchell",
       role: "@jakem • Engineering Lead",
-      img: "/home/QT6h9g8oeIZVG8UA6TdP0VrfWxQ.jpg",
+      img: "/home/QT6h9g8oeIZVG8UA6TdP0VrfWxQ.webp",
     },
     {
       stars: 5,
       text: "The crew handled our stainless steel railings and entrance gates with clear timelines, solid workmanship, and zero confusion.",
       name: "Ryan Carter",
       role: "@ryanc_builds • Main Contractor",
-      img: "/home/qecwzS8HSAdDifIJYBF7ozvJEw.jpg",
+      img: "/home/qecwzS8HSAdDifIJYBF7ozvJEw.webp",
     },
   ];
 
@@ -56,7 +56,7 @@ export function TestimonialsSection() {
           <div className="flex items-center gap-1.5 text-neutral-400 shrink-0">
             <div className="relative w-3.5 h-3.5 shrink-0">
               <Image
-                src="/home/1ZWSzdE6ssdj1Lj7QdMU6YG77ps.png"
+                src="/home/1ZWSzdE6ssdj1Lj7QdMU6YG77ps.webp"
                 alt="Client Reviews Rating Badge"
                 fill
                 loading="lazy"

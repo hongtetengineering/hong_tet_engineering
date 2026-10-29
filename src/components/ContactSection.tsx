@@ -35,7 +35,7 @@ export function ContactSection() {
           {/* Left Column: Relevant Engineering Photo */}
           <div className="lg:col-span-5 relative h-[300px] sm:h-[480px] lg:h-[560px] rounded-3xl overflow-hidden border border-white/12 shadow-2xl bg-neutral-900 group">
             <Image
-              src="/home/contact-engineering-team.jpg"
+              src="/home/contact-engineering-team.webp"
               alt="Hong Tet Engineering team reviewing site drawings"
               fill
               className="object-cover group-hover:scale-103 transition-transform duration-700 ease-out"

@@ -13,7 +13,7 @@ const projects = [
     location: "Tuas Industrial, Singapore",
     date: "Jul 2024 – Sep 2024",
     category: "Metal Structure Fabrication",
-    img: "/Projects/Structural Steel Framing & I-Beams.jpg",
+    img: "/Projects/Structural Steel Framing & I-Beams.webp",
     alt: "Structural Steel Framing & I-Beams",
   },
   {
@@ -22,7 +22,7 @@ const projects = [
     location: "Woodlands Logistics, Singapore",
     date: "May 2024 – Aug 2024",
     category: "Roofing & Shelter Works",
-    img: "/Projects/Industrial Canopy & Zinc Roofing.jpg",
+    img: "/Projects/Industrial Canopy & Zinc Roofing.webp",
     alt: "Industrial Canopy & Zinc Roofing",
   },
   {
@@ -31,7 +31,7 @@ const projects = [
     location: "Bukit Batok, Singapore",
     date: "Mar 2024 – Jun 2024",
     category: "Metal & Stainless-Steel Works",
-    img: "/Projects/Stainless Steel Railings & Heavy Gate.jpg",
+    img: "/Projects/Stainless Steel Railings & Heavy Gate.webp",
     alt: "Stainless Steel Railings & Heavy Gate",
   },
   {
@@ -40,7 +40,7 @@ const projects = [
     location: "Jurong East, Singapore",
     date: "Jan 2024 – Apr 2024",
     category: "Glass Installation & Renovation",
-    img: "/Projects/Architectural Glass Windows & Facade.jpg",
+    img: "/Projects/Architectural Glass Windows & Facade.webp",
     alt: "Architectural Glass Windows & Facade",
   },
 ];

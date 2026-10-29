@@ -57,7 +57,7 @@ export function ContactClientView() {
             {/* Architectural Blueprint Background Image */}
             <div className="absolute inset-0 w-full h-full pointer-events-none select-none z-0">
               <Image
-                src="/home/105zO15MKPqahxW0hkKzQ2UbeU.png"
+                src="/home/105zO15MKPqahxW0hkKzQ2UbeU.webp"
                 alt="Architectural Blueprint Drawing"
                 fill
                 priority

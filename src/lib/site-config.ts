@@ -29,8 +29,8 @@ export const siteConfig = {
   // Brand assets
   assets: {
     logo: "/logo/full-logo-transparent.webp",
-    ogImage: "/home/contact-engineering-team.jpg",
-    blueprintBg: "/home/105zO15MKPqahxW0hkKzQ2UbeU.png",
+    ogImage: "/home/contact-engineering-team.webp",
+    blueprintBg: "/home/105zO15MKPqahxW0hkKzQ2UbeU.webp",
   },
 
   // Service specialties for structured entities
